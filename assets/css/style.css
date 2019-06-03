@@ -1,0 +1,68 @@
+/* ----- GENERAL STYLING ----- */
+
+/* ----- COLOURS ----- */
+
+/* ----- NAVIGATION BAR ----- */
+
+.title-bar {
+    position: fixed;
+    min-height: 50px;
+    background-color: #0e7a0d;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #0e7a0d;
+    z-index: 1;
+    color: #000000;
+}
+
+.reset-filters-top {
+    margin: 10px 20px 10px;
+
+}
+
+.reset-filters-top,
+.reset-filters-top:focus,
+.reset-filters-top:active:focus {
+    outline: none;
+}
+
+/*----- Footer -----*/
+
+.footer {
+    min-height: 50px;
+    margin-top: 10px;
+    background-color: #0e7a0d;
+    color: #000000;
+    justify-content: space-around;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.github-logo {
+    color: #ffffff;
+    font-size: 2em;
+    padding: 10px 0;
+    transition: all .3s ease-in-out;
+}
+
+.github-logo:focus,
+.github-logo:hover {
+    color: #0e7a0d;
+}
+
+.kaggle-logo {
+    height: 1.25em;
+}
+
+.kaggle-logo:focus,
+.kaggle-logo:hover {
+    opacity: 0.8;
+}
