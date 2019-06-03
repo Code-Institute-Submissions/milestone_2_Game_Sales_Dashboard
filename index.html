@@ -13,7 +13,7 @@
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css" type="text/css" />
     <!-- JS SCRIPTS -->
-    <script type="text/javascript" src="assets/js/d3.min.s"></script>
+    <script type="text/javascript" src="assets/js/d3.min.js"></script>
     <script type="text/javascript" src="assets/js/crossfilter.min.js"></script>
     <script type="text/javascript" src="assets/js/dc.min.js"></script>
     <script type="text/javascript" src="assets/js/queue.min.js"></script>
@@ -23,15 +23,34 @@
 </head>
 <body>
 <!-- Top Title Bar -->
-    <nav class="container-fluid">
+    <header class="container-fluid">
         <div class="row">
             <div class="col-12 title-bar">
                 <a href="#" class="title">Top 100 Video Game Sales Dashboard</a>
                 <button type="button" id="reset-filters" class="btn btn-secondary reset-filters-top">Reset Filters</button>
             </div>
         </div>
-    </nav>
+    </header>
 
+<!-- Main Content -->
+    <section class="container-fluid main-content">
+        <div class="row">
+            <article class="col-12">
+                <div class="introduction">
+                    <p>
+
+                    </p>
+                </div>
+                <div class="dropdown-filter">
+                    <div>Game Filter</div>
+                    <div id="game-selector"></div>
+                </div>
+            </article>
+            <article>
+
+            </article>
+        </div>
+    </section>
 
 <!--Footer -->
     <footer class="container-fluid footer">
@@ -41,10 +60,12 @@
                     <div>&copy;2019 Martin Crowley</div>
                 </div>
                 <div class="col-12 col-sm-4">
-                    <a href="https://github.com/Mcrowley93" target="_blank"><i class="fab fa-github github-logo"></i></a>
+                    <a href="https://github.com/Mcrowley93" target="_blank">
+                        <i class="fab fa-github github-logo"></i>
+                    </a>
                 </div>
                 <div class="col-12 col-sm-4">
-                    <div>Original unmodified dataset from <span><a href="https://www.kaggle.com/sidtwr/videogames-sales-dataset#PS4_GamesSales.csv" target="_blank"><img src="assets/images/kaggle.png" alt="kaggle.com" class="kaggle-logo"></a></span>.</div>
+                    <div>Original datasets from <span><a href="https://www.kaggle.com/sidtwr/videogames-sales-dataset#PS4_GamesSales.csv" target="_blank"><img src="assets/images/kaggle-logo.png" alt="kaggle.com" class="kaggle-logo"></a></span>.</div>
                 </div>
             </div>
         </div>
