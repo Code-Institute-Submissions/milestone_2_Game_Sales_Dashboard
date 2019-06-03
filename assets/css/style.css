@@ -1,8 +1,16 @@
 /* ----- GENERAL STYLING ----- */
 
+.dropdown-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
 /* ----- COLOURS ----- */
 
-/* ----- NAVIGATION BAR ----- */
+/* ----- HEADER ----- */
 
 .title-bar {
     position: fixed;
@@ -13,12 +21,22 @@
     justify-content: space-around;
     align-items: center;
     border-bottom: 1px solid #0e7a0d;
-    z-index: 1;
     color: #000000;
+    padding-bottom: 10px;
+}
+
+.title,
+.title:focus,
+.title:hover {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.3em;
+    margin: 10px 20px;
+    text-align: center;
 }
 
 .reset-filters-top {
-    margin: 10px 20px 10px;
+    margin: 10px;
 
 }
 
@@ -26,6 +44,11 @@
 .reset-filters-top:focus,
 .reset-filters-top:active:focus {
     outline: none;
+}
+
+/*----- Main Content -----*/
+.main-content{
+    min-height: calc(100vh - 70px);
 }
 
 /*----- Footer -----*/
@@ -36,6 +59,7 @@
     background-color: #0e7a0d;
     color: #000000;
     justify-content: space-around;
+    position: relative;
 }
 
 .footer-content {
@@ -48,7 +72,7 @@
 
 .github-logo {
     color: #ffffff;
-    font-size: 2em;
+    font-size: 20px;
     padding: 10px 0;
     transition: all .3s ease-in-out;
 }
@@ -59,7 +83,7 @@
 }
 
 .kaggle-logo {
-    height: 1.25em;
+    height: 20px;
 }
 
 .kaggle-logo:focus,
