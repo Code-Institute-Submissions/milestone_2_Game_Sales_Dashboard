@@ -4,7 +4,6 @@ queue()
     
 function makeGraphs(error, gamesalesData) {
     var ndx = crossfilter(gamesalesData)
-    // TODO: make graphs using d3
     gamesalesData.forEach(function(d){
         d.north_america = parseInt(d["north_america"]);
         d.europe = parseInt(d["europe"]);
@@ -16,12 +15,15 @@ function makeGraphs(error, gamesalesData) {
     game_selector(ndx);
 
     /* ----- Games per Console & Console Selector -----*/
+    // TODO LOOK OVER THE BELOW CODE TO TRY AND GET INDIVIDUAL NUMBER DISPLAYS WORKING
     // number_of_ps4_games_available(ndx);
     // number_of_xboxone_games_available(ndx);
+    // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL NUMBER DISPLAYS WORKING
     console_selector(ndx);
 
-    /* ----- Units Sold Per Console -----*/
-    units_sold_comparison(ndx);
+    /* ----- Games Sold Per Console -----*/
+    per_console_games_sales_comparison(ndx);
+
 
     dc.renderAll();
 }
@@ -48,7 +50,7 @@ function game_selector(ndx) {
 function number_of_ps4_games_available(ndx) {
     var numberOfPs4GamesAvailable = ndx.groupAll().reduce(
         function(p, v) {
-            if (v.console === Console) {
+            if (v.game === "") {
                 p.count++;
                 if (v.console === "PS4") {
                     p.are_ps4++;
@@ -57,7 +59,7 @@ function number_of_ps4_games_available(ndx) {
             return p;
         },
                 function(p, v) {
-            if (v.console === Console) {
+            if (v.game === "") {
                 p.count--;
                 if (v.console === "PS4") {
                     p.are_ps4--;
@@ -82,10 +84,11 @@ function number_of_ps4_games_available(ndx) {
         .group(numberOfPs4GamesAvailable);
 };
 */
-/* function number_of_xboxone_games_available(ndx) {
+/*
+function number_of_xboxone_games_available(ndx) {
     var numberOfXboxoneGamesAvailable = ndx.groupAll().reduce(
         function(p, v) {
-            if (v.console === Console) {
+            if (v.game === "") {
                 p.count++;
                 if (v.console === "XBOX ONE") {
                     p.are_xboxone++;
@@ -94,7 +97,7 @@ function number_of_ps4_games_available(ndx) {
             return p;
         },
         function(p, v) {
-            if (v.console === Console) {
+            if (v.game === "") {
                 p.count--;
                 if (v.console === "XBOX ONE") {
                     p.are_xboxone--;
@@ -131,4 +134,24 @@ function console_selector(ndx) {
     dc.selectMenu("#console-selector")
         .dimension(consoleDim)
         .group(consoleGroup);
+}
+
+/* ----- Units Sold Per Console -----*/
+function per_console_games_sales_comparison(ndx) {
+    var console_name_dim = ndx.dimension(dc.pluck("console"));
+    var per_console_game_sales_comparison_group = console_name_dim.group().reduceSum(dc.pluck("global"));
+
+    dc.pieChart("#games-sold-comparison")
+        .height(330)
+        .radius(90)
+        .transitionDuration(1500)
+        .dimension(console_name_dim)
+        .group(per_console_game_sales_comparison_group)
+        // TODO LOOK OVER THE BELOW CODE TO TRY AND GET INDIVIDUAL NUMBER DISPLAYS WORKING
+        // TODO LOOK OVER THE BELOW CODE TO TRY AND GET INDIVIDUAL NUMBER DISPLAYS WORKING
+        // .title(function(d) {
+        //     return console_name_dim + "made" + [global] + "Million total game sales."
+        // });
+        // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL NUMBER DISPLAYS WORKING
+        // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL NUMBER DISPLAYS WORKING
 }
