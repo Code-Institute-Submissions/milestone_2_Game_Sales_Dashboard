@@ -24,6 +24,20 @@ function makeGraphs(error, gamesalesData) {
     /* ----- Games Sold Per Console -----*/
     per_console_games_sales_comparison(ndx);
 
+    /* ----- Total Games Sold Per Genre/Publisher -----*/
+    // genre_global_sales(ndx);
+    // publisher_global_sales(ndx);
+    //
+    // /* ----- Game Sales Per Genre Per Region -----*/
+    // north_america_genre_sales(ndx);
+    // europe_genre_sales(ndx);
+    // rest_of_world_genre_sales(ndx);
+    //
+    // /* ----- Genres in Top 100 -----*/
+    // genre_comparison(ndx);
+    //
+    // /* ----- Publishers in Top 100 -----*/
+    // publisher_comparison(ndx);
 
     dc.renderAll();
 }
