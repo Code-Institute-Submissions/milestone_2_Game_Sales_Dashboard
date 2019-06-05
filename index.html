@@ -23,35 +23,53 @@
 </head>
 <body>
 <!-- Top Title Bar -->
-    <header class="container-fluid">
-        <div class="row">
-            <div class="col-12 title-bar">
-                <a href="#" class="title">Top 100 Video Game Sales Dashboard</a>
-                <button type="button" id="reset-filters" class="btn btn-secondary reset-filters-top">Reset Filters</button>
+    <section class="main-content">
+        <section class="container-fluid">
+            <div class="row">
+                <div class="col-12 title-bar fixed-top">
+                    <h1 class="title">Top 100 Video Game Sales Dashboard</h1>
+                    <button type="button" id="reset-filters" class="btn btn-secondary reset-filters-top">Reset Filters</button>
+                </div>
             </div>
-        </div>
-    </header>
+        </section>
+        <div class="spacer"></div>
+    <!-- Main Content -->
+        <section class="container-fluid">
+            <div class="row">
+                <article class="col-12 col-sm-4">
+                    <div class="content">
+                        <h2>Introduction</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci autem consequuntur dignissimos ea, est et eveniet illo inventore iure laboriosam minus officia quia, repellendus soluta sunt unde ut vero!
+                        </p>
+                    </div>
+                    <br/>
+                    <div class="dropdown-filter">
+                        <div>Game Filter</div>
+                        <div id="game-selector"></div>
+                    </div>
+                </article>
 
-<!-- Main Content -->
-    <section class="container-fluid main-content">
-        <div class="row">
-            <article class="col-12">
-                <div class="introduction">
-                    <p>
+                <article class="col-12 col-sm-4">
+                    <div class="content">
+                        <h2>Games belonging to each console</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci autem consequuntur dignissimos ea, est et eveniet illo inventore iure laboriosam minus officia quia, repellendus soluta sunt unde ut vero!
+                        </p>
+                    </div>
+                    <div id="number-of-ps4-games"></div>
+                    <div id="number-of-xboxone-games"></div>
+                    <br/>
+                    <div class="dropdown-filter">
+                        <div>Console Filter</div>
+                        <div id="console-selector"></div>
+                    </div>
+                </article>
 
-                    </p>
-                </div>
-                <div class="dropdown-filter">
-                    <div>Game Filter</div>
-                    <div id="game-selector"></div>
-                </div>
-            </article>
-            <article>
 
-            </article>
-        </div>
+            </div>
+        </section>
     </section>
-
 <!--Footer -->
     <footer class="container-fluid footer">
         <div class="container">
