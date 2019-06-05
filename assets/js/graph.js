@@ -25,7 +25,7 @@ function makeGraphs(error, gamesalesData) {
     per_console_games_sales_comparison(ndx);
 
     /* ----- Total Games Sold Per Genre/Publisher -----*/
-    // genre_global_sales(ndx);
+    genre_global_sales(ndx);
     // publisher_global_sales(ndx);
     //
     // /* ----- Game Sales Per Genre Per Region -----*/
@@ -41,7 +41,6 @@ function makeGraphs(error, gamesalesData) {
 
     dc.renderAll();
 }
-
 
 
 
@@ -168,4 +167,23 @@ function per_console_games_sales_comparison(ndx) {
         // });
         // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL NUMBER DISPLAYS WORKING
         // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL NUMBER DISPLAYS WORKING
+}
+
+/* ----- Total Games Sold Per Genre/Publisher -----*/
+ function genre_global_sales(ndx) {
+     var genre_dimension = ndx.dimension(dc.pluck("genre"));
+     var genre_global_sales_group = genre_dimension.group().reduceSum(dc.pluck("global"));
+
+     dc.barChart("#genre-global-sales")
+         .width(650)
+         .height(400)
+         .margins({top: 10, right: 50, bottom: 30, left: 50})
+         .dimension(genre_dimension)
+         .group(genre_global_sales_group)
+         .transitionDelay(500)
+         .x(d3.scale.ordinal())
+         .xUnits(dc.units.ordinal)
+         .xAxisLabel("Genre")
+         .yAxisLabel("Games sold (in millions)")
+         .yAxis().ticks(8);
 }
