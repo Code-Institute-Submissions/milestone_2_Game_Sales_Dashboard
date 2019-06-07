@@ -313,3 +313,24 @@ function genre_selector(ndx) {
         .group(genre_selector_group);
 }
 
+/*----- Comparison of Publishers in Top 100 -----*/
+
+function publisher_comparison(ndx) {
+    var publisher_comparison_dim = ndx.dimension(dc.pluck("publisher"));
+    var publisher_comparison_group = publisher_comparison_dim.group();
+
+    dc.pieChart("#publisher-comparison")
+        .height(330)
+        .radius(90)
+        .transitionDuration(1500)
+        .dimension(publisher_comparison_dim)
+        .group(publisher_comparison_group);
+    // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
+    // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
+    // .title(function(d) {
+    //     return console_name_dim + "made" + [global] + "Million total game sales."
+    // });
+    // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL TITLE WORKING
+    // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL TITLE WORKING
+}
+
