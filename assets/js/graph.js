@@ -260,3 +260,24 @@ function europe_genre_sales(ndx) {
 }
 // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET LEGEND AND RESIZING WORKING
 
+/* ----- Total Games Sold Per Genre in the Rest of World -----*/
+function rest_of_world_genre_sales(ndx) {
+    var rest_of_world_genre_dimension = ndx.dimension(dc.pluck("genre"));
+    var rest_of_world_genre_sales_group = rest_of_world_genre_dimension.group().reduceSum(dc.pluck("rest_of_world"));
+
+    dc.barChart("#rest-of-world-genre-sales")
+        .width(400)
+        .height(300)
+        .margins({top: 10, right: 50, bottom: 30, left: 50})
+        .dimension(rest_of_world_genre_dimension)
+        .group(rest_of_world_genre_sales_group)
+        .transitionDelay(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .xAxisLabel("Genre")
+        .yAxisLabel("Games sold (in millions)")
+        .yAxis().ticks(8);
+    // .legend(dc.legend().x(550).y(0).itemHeight(15).gap(5));
+}
+// TODO LOOK OVER THE ABOVE CODE TO TRY AND GET LEGEND AND RESIZING WORKING
+
