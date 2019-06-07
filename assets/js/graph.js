@@ -239,3 +239,24 @@ function north_america_genre_sales(ndx) {
 }
 // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET LEGEND AND RESIZING WORKING
 
+/* ----- Total Games Sold Per Genre in Europe -----*/
+function europe_genre_sales(ndx) {
+    var europe_genre_dimension = ndx.dimension(dc.pluck("genre"));
+    var europe_genre_sales_group = europe_genre_dimension.group().reduceSum(dc.pluck("europe"));
+
+    dc.barChart("#europe-genre-sales")
+        .width(400)
+        .height(300)
+        .margins({top: 10, right: 50, bottom: 30, left: 50})
+        .dimension(europe_genre_dimension)
+        .group(europe_genre_sales_group)
+        .transitionDelay(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .xAxisLabel("Genre")
+        .yAxisLabel("Games sold (in millions)")
+        .yAxis().ticks(8);
+    // .legend(dc.legend().x(550).y(0).itemHeight(15).gap(5));
+}
+// TODO LOOK OVER THE ABOVE CODE TO TRY AND GET LEGEND AND RESIZING WORKING
+
