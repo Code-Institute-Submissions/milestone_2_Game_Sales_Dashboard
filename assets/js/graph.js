@@ -334,3 +334,13 @@ function publisher_comparison(ndx) {
     // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL TITLE WORKING
 }
 
+/*----- Publisher Selector Function -----*/
+
+function publisher_selector(ndx) {
+    var publisher_selector_dim = ndx.dimension(dc.pluck("publisher"));
+    var publisher_selector_group = publisher_selector_dim.group();
+
+    dc.selectMenu("#publisher-selector")
+        .dimension(publisher_selector_dim)
+        .group(publisher_selector_group);
+}
