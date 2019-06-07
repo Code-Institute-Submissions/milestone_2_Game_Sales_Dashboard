@@ -281,3 +281,24 @@ function rest_of_world_genre_sales(ndx) {
 }
 // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET LEGEND AND RESIZING WORKING
 
+/*----- Comparison of Genres in Top 100 -----*/
+
+function genre_comparison(ndx) {
+    var genre_comparison_dim = ndx.dimension(dc.pluck("genre"));
+    var genre_comparison_group = genre_comparison_dim.group();
+
+    dc.pieChart("#genre-comparison")
+        .height(330)
+        .radius(90)
+        .transitionDuration(1500)
+        .dimension(genre_comparison_dim)
+        .group(genre_comparison_group);
+    // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
+    // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
+    // .title(function(d) {
+    //     return console_name_dim + "made" + [global] + "Million total game sales."
+    // });
+    // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL TITLE WORKING
+    // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL TITLE WORKING
+}
+
