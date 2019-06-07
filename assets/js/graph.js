@@ -302,3 +302,14 @@ function genre_comparison(ndx) {
     // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL TITLE WORKING
 }
 
+/*----- Genre Selector Function -----*/
+
+function genre_selector(ndx) {
+    var genre_selector_dim = ndx.dimension(dc.pluck("genre"));
+    var genre_selector_group = genre_selector_dim.group();
+
+    dc.selectMenu("#genre-selector")
+        .dimension(genre_selector_dim)
+        .group(genre_selector_group);
+}
+
