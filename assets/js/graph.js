@@ -25,19 +25,21 @@ function makeGraphs(error, gamesalesData) {
     per_console_games_sales_comparison(ndx);
 
     /* ----- Total Games Sold Per Genre/Publisher -----*/
-    genre_global_sales(ndx);
-    // publisher_global_sales(ndx);
-    //
-    // /* ----- Game Sales Per Genre Per Region -----*/
-    // north_america_genre_sales(ndx);
-    // europe_genre_sales(ndx);
-    // rest_of_world_genre_sales(ndx);
-    //
-    // /* ----- Genres in Top 100 -----*/
-    // genre_comparison(ndx);
-    //
-    // /* ----- Publishers in Top 100 -----*/
-    // publisher_comparison(ndx);
+    global_genre_sales(ndx);
+    global_publisher_sales(ndx);
+
+    /* ----- Game Sales Per Genre Per Region -----*/
+    north_america_genre_sales(ndx);
+    europe_genre_sales(ndx);
+    rest_of_world_genre_sales(ndx);
+
+    /* ----- Genres in Top 100 -----*/
+    genre_comparison(ndx);
+    genre_selector(ndx);
+
+    /* ----- Publishers in Top 100 -----*/
+    publisher_comparison(ndx);
+    publisher_selector(ndx);
 
     dc.renderAll();
 }
@@ -47,12 +49,12 @@ function makeGraphs(error, gamesalesData) {
 /*----- Video Game Selector Function -----*/
 
 function game_selector(ndx) {
-    var gameDim = ndx.dimension(dc.pluck("game"));
-    var gameGroup = gameDim.group();
+    var game_selector_dim = ndx.dimension(dc.pluck("game"));
+    var game_selector_group = game_selector_dim.group();
 
     dc.selectMenu("#game-selector")
-        .dimension(gameDim)
-        .group(gameGroup);
+        .dimension(game_selector_dim)
+        .group(game_selector_group);
 }
 
 
@@ -160,30 +162,59 @@ function per_console_games_sales_comparison(ndx) {
         .transitionDuration(1500)
         .dimension(console_name_dim)
         .group(per_console_game_sales_comparison_group)
-        // TODO LOOK OVER THE BELOW CODE TO TRY AND GET INDIVIDUAL NUMBER DISPLAYS WORKING
-        // TODO LOOK OVER THE BELOW CODE TO TRY AND GET INDIVIDUAL NUMBER DISPLAYS WORKING
+        // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
+        // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
         // .title(function(d) {
         //     return console_name_dim + "made" + [global] + "Million total game sales."
         // });
-        // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL NUMBER DISPLAYS WORKING
-        // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL NUMBER DISPLAYS WORKING
+        // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL TITLE WORKING
+        // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL TITLE WORKING
 }
 
-/* ----- Total Games Sold Per Genre/Publisher -----*/
- function genre_global_sales(ndx) {
-     var genre_dimension = ndx.dimension(dc.pluck("genre"));
-     var genre_global_sales_group = genre_dimension.group().reduceSum(dc.pluck("global"));
+/* ----- Total Games Sold Per Genre Globally -----*/
+ function global_genre_sales(ndx) {
+     var global_genre_sales_dimension = ndx.dimension(dc.pluck("genre"));
+     var global_genre_sales_group = global_genre_sales_dimension.group().reduceSum(dc.pluck("global"));
 
      dc.barChart("#genre-global-sales")
          .width(650)
          .height(400)
          .margins({top: 10, right: 50, bottom: 30, left: 50})
-         .dimension(genre_dimension)
-         .group(genre_global_sales_group)
+         .dimension(global_genre_sales_dimension)
+         .group(global_genre_sales_group)
          .transitionDelay(500)
          .x(d3.scale.ordinal())
          .xUnits(dc.units.ordinal)
          .xAxisLabel("Genre")
          .yAxisLabel("Games sold (in millions)")
          .yAxis().ticks(8);
+         // .legend(dc.legend().x(550).y(0).itemHeight(15).gap(5));
 }
+// TODO LOOK OVER THE ABOVE CODE TO TRY AND GET LEGEND AND RESIZING WORKING
+
+/* ----- Total Games Sold Per Publisher -----*/
+function global_publisher_sales(ndx) {
+    var global_publisher_dimension = ndx.dimension(dc.pluck("publisher"));
+    var publisher_north_america_sales_group = global_publisher_dimension.group().reduceSum(dc.pluck("north_america"));
+    var publisher_europe_sales_group = global_publisher_dimension.group().reduceSum(dc.pluck("europe"));
+    var publisher_rest_of_world_sales_group = global_publisher_dimension.group().reduceSum(dc.pluck("rest_of_world"));
+
+    dc.barChart("#publisher-global-sales") //THIS BAR CHART WILL BE A STACKED BAR CHART
+        .width(650)
+        .height(400)
+        .margins({top: 10, right: 50, bottom: 30, left: 50})
+        .dimension(global_publisher_dimension)
+        .group(publisher_north_america_sales_group, "North America")
+        .stack(publisher_europe_sales_group, "Europe")
+        .stack(publisher_rest_of_world_sales_group, "Rest of World")
+        .transitionDelay(500)
+        .x(d3.scale.ordinal())
+        .xUnits(dc.units.ordinal)
+        .xAxisLabel("Publisher")
+        .yAxisLabel("Games sold (in millions)")
+        .yAxis().ticks(8);
+        // .legend(dc.legend().x(550).y(0).itemHeight(15).gap(5));
+}
+// TODO LOOK OVER THE ABOVE CODE TO TRY AND GET LEGEND AND RESIZING WORKING
+
+
