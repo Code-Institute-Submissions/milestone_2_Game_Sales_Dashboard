@@ -105,11 +105,11 @@
 }
 
 /*--- Bar Charts Axis Labels ---*/
-#publisher-global-sales .x.axis label,
+/*--- #publisher-global-sales .x.axis label,
 #north-america-genre-sales .x.axis label,
 #europe-genre-sales .x.axis label,
 #rest-of-world-genre-sales .x.axis label{
-    transform: translateX(50px);
 }
+---/*
 
 
