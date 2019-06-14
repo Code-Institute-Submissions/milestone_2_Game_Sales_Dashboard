@@ -8,58 +8,102 @@
     margin-bottom: 10px;
 }
 
-.spacer {
-    min-height: 150px;
+/* The make-space class creates space from the top of the page, meaning the main content is pushed far enough down so that it isn't hidden by the title-bar*/
+.make-space {
+    min-height: 100px;
+}
+.content-wrapper {
+    margin: 5px;
+}
+.content {
+    padding: 5px 10px;
+}
+.main-content {
+    text-align: center;
 }
 
 
+
 /* ----- COLOURS ----- */
+.title-bar,
+.headings,
+.sub-headings,
+.main-content,
+.footer{
+    color: #ffffff;
+}
+
+
 
 /* ----- HEADER ----- */
 
 .title-bar {
-    min-height: 50px;
-    background-color: #003791;
+    padding-top: 10px;
+    margin: 0;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: #107c10;
+    border-bottom: 1px solid #107c10;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
-    border-bottom: 1px solid #003791;
-    color: #ffffff;
-    padding-bottom: 10px;
 }
 
 .title {
-    color: #ffffff;
     text-decoration: none;
     font-size: 25px;
     margin: 10px 20px;
     text-align: center;
 }
 
-.reset-filters-top {
-    margin: 10px;
-
+.reset-filters {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #c6b6b6;
 }
 
-.reset-filters-top,
-.reset-filters-top:focus,
-.reset-filters-top:active:focus {
+.reset-filters,
+.reset-filters:focus,
+.reset-filters:active:focus {
     outline: none;
 }
 
-/*----- Main Content -----*/
-.main-content{
-    min-height: calc(100vh - 70px);
+.reset-filters:hover {
+    background-color: #6b6b6b;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
+
+
+
+/*----- Main Content -----*/
+
+.selector {
+    color: #000000;
+    margin-top: 10px;
+}
+
+.page-background {
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+
+}
+
+
 
 /*----- Footer -----*/
 
 .footer {
     min-height: 50px;
     margin-top: 10px;
-    background-color: #003791;
-    color: #ffffff;
+    background-color: #107c10;
     justify-content: space-around;
     position: relative;
 }
@@ -72,18 +116,6 @@
     padding: 10px;
 }
 
-.github-logo {
-    color: #ffffff;
-    font-size: 20px;
-    padding: 10px 0;
-    transition: all .3s ease-in-out;
-}
-
-.github-logo:focus,
-.github-logo:hover {
-    color: #003791;
-}
-
 .kaggle-logo {
     height: 20px;
 }
@@ -93,7 +125,11 @@
     opacity: 0.8;
 }
 
-/*--- Bar Charts Axis Text ---*/
+
+
+/*--- Charts ---*/
+
+/* Bar charts axis text was overlapping where the labels for each tick was written horizontally, so the code below turns the text to 45 degrees/diagonal, meaning the writing is easier to read */
 /* help with the code below was taken from https://github.com/dc-js/dc.js/issues/731 - (davisford commented on 18 Oct 2014) */
 #publisher-global-sales .x.axis text,
 #genre-global-sales .x.axis text,
@@ -104,12 +140,23 @@
     transform: rotate(-45deg);
 }
 
+/* Code below changes the color of the labels/text on the various charts listed */
+.bar-chart,
+.stacked-bar-chart,
+.pie-chart{
+    fill: #ffffff;
+}
+
+/* Code below changes the color of the ticks on the charts charts used */
+.x.axis line,
+.y.axis line{
+    stroke: #ffffff;;
+}
+
 /*--- Bar Charts Axis Labels ---*/
 /*--- #publisher-global-sales .x.axis label,
 #north-america-genre-sales .x.axis label,
 #europe-genre-sales .x.axis label,
 #rest-of-world-genre-sales .x.axis label{
-}
----/*
-
+}---/*
 
