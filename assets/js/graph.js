@@ -3,13 +3,17 @@ queue()
     .await(makeGraphs);
     
 function makeGraphs(error, gamesalesData) {
-    var ndx = crossfilter(gamesalesData)
+    var ndx = crossfilter(gamesalesData);
+
+    /*
     gamesalesData.forEach(function(d){
-        d.north_america = parseInt(d["north_america"]);
-        d.europe = parseInt(d["europe"]);
-        d.rest_of_world = parseInt(d["rest_of_world"]);
-        d.global = parseInt(d["global"]);
+        d.north_america = parseFloat(d["north_america"]).toFixed(2);
+        d.europe = parseFloat(d["europe"]).toFixed(2);
+        d.rest_of_world = parseFloat(d["rest_of_world"]).toFixed(2);
+        d.global = parseFloat(d["global"]).toFixed(2);
     });
+*/
+    //TODO  try and get the numbers data converted to 2 decimal places...
 
     /* ----- Video Game Selector -----*/
     game_selector(ndx);
@@ -91,20 +95,15 @@ function console_game_sales_comparison(ndx) {
 
     dc.pieChart("#games-sold-comparison")
         .height(300)
-        .width(450)
+        .width(550)
         .radius(100)
         .cx(200)
         .transitionDuration(1500)
+        .renderLabel(false)
         .dimension(console_game_sales_comparison_dim)
         .group(console_game_sales_comparison_group)
         .ordinalColors(['#003791', '#107c10'])
         .legend(dc.legend().x(300).y(25).gap(3));
-
-        // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
-        // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
-        // .title(function(d) {
-        //     return console_name_dim + "made" + [global] + "Million total game sales."
-        // });
         // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL TITLE WORKING
         // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL TITLE WORKING
 }
@@ -114,12 +113,12 @@ function console_game_sales_comparison(ndx) {
      var global_genre_sales_dimension = ndx.dimension(dc.pluck("genre"));
      var global_genre_sales_group = global_genre_sales_dimension.group().reduceSum(dc.pluck("global"));
      var chart_colors = d3.scale.ordinal()
-         .range(['#003791', '#107c10','#000000', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
+         .range(['#003791', '#107c10', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
 
      dc.barChart("#genre-global-sales")
-         .width(700)
+         .width(550)
          .height(400)
-         .margins({top: 10, right: 50, bottom: 75, left: 50})
+         .margins({top: 10, right: 50, bottom: 75, left: 40})
          .dimension(global_genre_sales_dimension)
          .group(global_genre_sales_group)
          .transitionDelay(500)
@@ -132,10 +131,8 @@ function console_game_sales_comparison(ndx) {
          .elasticY(true)
          .xAxisLabel("Genre")
          .yAxisLabel("Games sold (in millions)")
-         .yAxis().ticks(6);
-         // .legend(dc.legend().x(550).y(0).itemHeight(15).gap(5));
+         .yAxis().ticks(8);
 }
-// TODO LOOK OVER THE ABOVE CODE TO TRY AND GET LEGEND AND RESIZING WORKING
 
 /* ----- Total Games Sold Per Publisher -----*/
 function global_publisher_sales(ndx) {
@@ -144,12 +141,12 @@ function global_publisher_sales(ndx) {
     var publisher_europe_sales_group = global_publisher_dimension.group().reduceSum(dc.pluck("europe"));
     var publisher_rest_of_world_sales_group = global_publisher_dimension.group().reduceSum(dc.pluck("rest_of_world"));
     var chart_colors = d3.scale.ordinal()
-        .range(['#003791', '#107c10','#000000', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
+        .range(['#003791', '#107c10', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
 
     dc.barChart("#publisher-global-sales") //THIS BAR CHART WILL BE A STACKED BAR CHART
-        .width(700)
+        .width(750)
         .height(400)
-        .margins({top: 10, right: 50, bottom: 105, left: 50})
+        .margins({top: 10, right: 50, bottom: 105, left: 40})
         .dimension(global_publisher_dimension)
         .group(publisher_north_america_sales_group, "North America")
         .stack(publisher_europe_sales_group, "Europe")
@@ -164,10 +161,8 @@ function global_publisher_sales(ndx) {
         .elasticY(true)
         .xAxisLabel("Publisher")
         .yAxisLabel("Games sold (in millions)")
-        .yAxis().ticks(12)
-        //.legend(dc.legend().x(550).y(0).itemHeight(15).gap(5));
+        .yAxis().ticks(8)
 }
-// TODO LOOK OVER THE ABOVE CODE TO TRY AND GET LEGEND AND RESIZING WORKING
 
 
 /* ----- Total Games Sold Per Genre in North America -----*/
@@ -175,12 +170,12 @@ function north_america_genre_sales(ndx) {
     var north_america_genre_dimension = ndx.dimension(dc.pluck("genre"));
     var north_america_genre_sales_group = north_america_genre_dimension.group().reduceSum(dc.pluck("north_america"));
     var chart_colors = d3.scale.ordinal()
-        .range(['#003791', '#107c10','#000000', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
+        .range(['#003791', '#107c10', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
 
     dc.barChart("#north-america-genre-sales")
         .width(450)
         .height(300)
-        .margins({top: 10, right: 50, bottom: 75, left: 50})
+        .margins({top: 10, right: 50, bottom: 75, left: 40})
         .dimension(north_america_genre_dimension)
         .group(north_america_genre_sales_group)
         .transitionDelay(500)
@@ -188,12 +183,15 @@ function north_america_genre_sales(ndx) {
             return d.key;
         })
         .colors(chart_colors)
+        .valueAccessor(function(d) {
+            return d.value.toFixed(2)
+        })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .elasticY(true)
         .xAxisLabel("Genre")
         .yAxisLabel("Games sold (in millions)")
-        .yAxis().ticks(12);
+        .yAxis().ticks(8);
         // .legend(dc.legend().x(550).y(0).itemHeight(15).gap(5));
 }
 // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET LEGEND AND RESIZING WORKING
@@ -203,12 +201,12 @@ function europe_genre_sales(ndx) {
     var europe_genre_dimension = ndx.dimension(dc.pluck("genre"));
     var europe_genre_sales_group = europe_genre_dimension.group().reduceSum(dc.pluck("europe"));
     var chart_colors = d3.scale.ordinal()
-        .range(['#003791', '#107c10','#000000', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
+        .range(['#003791', '#107c10', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
 
     dc.barChart("#europe-genre-sales")
         .width(450)
         .height(300)
-        .margins({top: 10, right: 50, bottom: 75, left: 50})
+        .margins({top: 10, right: 50, bottom: 75, left: 40})
         .dimension(europe_genre_dimension)
         .group(europe_genre_sales_group)
         .transitionDelay(500)
@@ -216,12 +214,15 @@ function europe_genre_sales(ndx) {
             return d.key;
         })
         .colors(chart_colors)
+        .valueAccessor(function(d) {
+            return d.value.toFixed(2)
+        })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .elasticY(true)
         .xAxisLabel("Genre")
         .yAxisLabel("Games sold (in millions)")
-        .yAxis().ticks(12);
+        .yAxis().ticks(8);
     // .legend(dc.legend().x(550).y(0).itemHeight(15).gap(5));
 }
 // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET LEGEND AND RESIZING WORKING
@@ -231,12 +232,12 @@ function rest_of_world_genre_sales(ndx) {
     var rest_of_world_genre_dimension = ndx.dimension(dc.pluck("genre"));
     var rest_of_world_genre_sales_group = rest_of_world_genre_dimension.group().reduceSum(dc.pluck("rest_of_world"));
     var chart_colors = d3.scale.ordinal()
-        .range(['#003791', '#107c10','#000000', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
+        .range(['#003791', '#107c10', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
 
     dc.barChart("#rest-of-world-genre-sales")
         .width(450)
         .height(300)
-        .margins({top: 10, right: 50, bottom: 75, left: 50})
+        .margins({top: 10, right: 50, bottom: 75, left: 40})
         .dimension(rest_of_world_genre_dimension)
         .group(rest_of_world_genre_sales_group)
         .transitionDelay(500)
@@ -244,12 +245,15 @@ function rest_of_world_genre_sales(ndx) {
             return d.key;
         })
         .colors(chart_colors)
+        .valueAccessor(function(d) {
+            return d.value.toFixed(2)
+        })
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .elasticY(true)
         .xAxisLabel("Genre")
         .yAxisLabel("Games sold (in millions)")
-        .yAxis().ticks(12)
+        .yAxis().ticks(8)
         // .legend(dc.legend().x(550).y(0).itemHeight(15).gap(5));
 }
 // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET LEGEND AND RESIZING WORKING
@@ -260,7 +264,7 @@ function genre_comparison(ndx) {
     var genre_comparison_dim = ndx.dimension(dc.pluck("genre"));
     var genre_comparison_group = genre_comparison_dim.group();
     var chart_colors = d3.scale.ordinal()
-        .range(['#003791', '#107c10','#000000', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
+        .range(['#003791', '#107c10', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
 
     dc.pieChart("#genre-comparison")
         .height(330)
@@ -270,12 +274,13 @@ function genre_comparison(ndx) {
         .transitionDuration(1500)
         .dimension(genre_comparison_dim)
         .group(genre_comparison_group)
-        .slicesCap(7)
+        .slicesCap(6)
+        .renderLabel(false)
         .colorAccessor(function(d) {
             return d.key;
         })
         .colors(chart_colors)
-        .legend(dc.legend().x(450).y(25).gap(3));
+        .legend(dc.legend().x(475).y(25).gap(3));
     // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
     // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
     // .title(function(d) {
@@ -291,22 +296,23 @@ function publisher_comparison(ndx) {
     var publisher_comparison_dim = ndx.dimension(dc.pluck("publisher"));
     var publisher_comparison_group = publisher_comparison_dim.group();
     var chart_colors = d3.scale.ordinal()
-        .range(['#003791', '#107c10','#000000', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
+        .range(['#003791', '#107c10', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
 
     dc.pieChart("#publisher-comparison")
         .height(330)
-        .width(550)
+        .width(650)
         .radius(150)
         .cx(275)
         .transitionDuration(1500)
         .dimension(publisher_comparison_dim)
         .group(publisher_comparison_group)
-        .slicesCap(7)
+        .slicesCap(6)
+        .renderLabel(false)
         .colorAccessor(function(d) {
             return d.key;
         })
         .colors(chart_colors)
-        .legend(dc.legend().x(450).y(25).gap(3));
+        .legend(dc.legend().x(475).y(25).gap(3));
     // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
     // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
     // .title(function(d) {
@@ -315,4 +321,5 @@ function publisher_comparison(ndx) {
     // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL TITLE WORKING
     // TODO LOOK OVER THE ABOVE CODE TO TRY AND GET INDIVIDUAL TITLE WORKING
 }
+
 
