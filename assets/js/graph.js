@@ -282,7 +282,6 @@ function genre_comparison(ndx) {
         .colors(chart_colors)
         .legend(dc.legend().x(450).y(25).gap(3));
     // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
-    // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
     // .title(function(d) {
     //     return console_name_dim + "made" + [global] + "Million total game sales."
     // });
