@@ -113,7 +113,7 @@ function console_game_sales_comparison(ndx) {
      var global_genre_sales_dimension = ndx.dimension(dc.pluck("genre"));
      var global_genre_sales_group = global_genre_sales_dimension.group().reduceSum(dc.pluck("global"));
      var chart_colors = d3.scale.ordinal()
-         .range(['#003791', '#107c10', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
+         .range(['#003791', '#107c10', '#78727c', '#5dc21e', '#ffffff', '#9800ff', '#ffa500']);
 
      dc.barChart("#genre-global-sales")
          .width(550)
@@ -141,7 +141,7 @@ function global_publisher_sales(ndx) {
     var publisher_europe_sales_group = global_publisher_dimension.group().reduceSum(dc.pluck("europe"));
     var publisher_rest_of_world_sales_group = global_publisher_dimension.group().reduceSum(dc.pluck("rest_of_world"));
     var chart_colors = d3.scale.ordinal()
-        .range(['#003791', '#107c10', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
+        .range(['#003791', '#107c10', '#78727c', '#5dc21e', '#f1f1f1', '#9800ff', '#ffa500']);
 
     dc.barChart("#publisher-global-sales") //THIS BAR CHART WILL BE A STACKED BAR CHART
         .width(750)
@@ -170,7 +170,7 @@ function north_america_genre_sales(ndx) {
     var north_america_genre_dimension = ndx.dimension(dc.pluck("genre"));
     var north_america_genre_sales_group = north_america_genre_dimension.group().reduceSum(dc.pluck("north_america"));
     var chart_colors = d3.scale.ordinal()
-        .range(['#003791', '#107c10', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
+        .range(['#003791', '#107c10', '#78727c', '#5dc21e', '#f1f1f1', '#9800ff', '#ffa500']);
 
     dc.barChart("#north-america-genre-sales")
         .width(450)
@@ -201,7 +201,7 @@ function europe_genre_sales(ndx) {
     var europe_genre_dimension = ndx.dimension(dc.pluck("genre"));
     var europe_genre_sales_group = europe_genre_dimension.group().reduceSum(dc.pluck("europe"));
     var chart_colors = d3.scale.ordinal()
-        .range(['#003791', '#107c10', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
+        .range(['#003791', '#107c10', '#78727c', '#5dc21e', '#f1f1f1', '#9800ff', '#ffa500']);
 
     dc.barChart("#europe-genre-sales")
         .width(450)
@@ -232,7 +232,7 @@ function rest_of_world_genre_sales(ndx) {
     var rest_of_world_genre_dimension = ndx.dimension(dc.pluck("genre"));
     var rest_of_world_genre_sales_group = rest_of_world_genre_dimension.group().reduceSum(dc.pluck("rest_of_world"));
     var chart_colors = d3.scale.ordinal()
-        .range(['#003791', '#107c10', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
+        .range(['#003791', '#107c10', '#78727c', '#5dc21e', '#f1f1f1', '#9800ff', '#ffa500']);
 
     dc.barChart("#rest-of-world-genre-sales")
         .width(450)
@@ -264,7 +264,7 @@ function genre_comparison(ndx) {
     var genre_comparison_dim = ndx.dimension(dc.pluck("genre"));
     var genre_comparison_group = genre_comparison_dim.group();
     var chart_colors = d3.scale.ordinal()
-        .range(['#003791', '#107c10', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
+        .range(['#003791', '#107c10', '#78727c', '#5dc21e', '#f1f1f1', '#9800ff', '#4f9eff', '#ffa500']);
 
     dc.pieChart("#genre-comparison")
         .height(330)
@@ -274,13 +274,13 @@ function genre_comparison(ndx) {
         .transitionDuration(1500)
         .dimension(genre_comparison_dim)
         .group(genre_comparison_group)
-        .slicesCap(6)
+        .slicesCap(7)
         .renderLabel(false)
         .colorAccessor(function(d) {
             return d.key;
         })
         .colors(chart_colors)
-        .legend(dc.legend().x(475).y(25).gap(3));
+        .legend(dc.legend().x(450).y(25).gap(3));
     // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
     // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
     // .title(function(d) {
@@ -296,7 +296,7 @@ function publisher_comparison(ndx) {
     var publisher_comparison_dim = ndx.dimension(dc.pluck("publisher"));
     var publisher_comparison_group = publisher_comparison_dim.group();
     var chart_colors = d3.scale.ordinal()
-        .range(['#003791', '#107c10', '#c2c2c2', '#5dc21e', '#f1f1f1', '#ffa500', '#a7a6ba']);
+        .range(['#003791', '#107c10', '#78727c', '#5dc21e', '#f1f1f1', '#9800ff', '#4f9eff', '#ffa500']);
 
     dc.pieChart("#publisher-comparison")
         .height(330)
@@ -306,13 +306,13 @@ function publisher_comparison(ndx) {
         .transitionDuration(1500)
         .dimension(publisher_comparison_dim)
         .group(publisher_comparison_group)
-        .slicesCap(6)
+        .slicesCap(7)
         .renderLabel(false)
         .colorAccessor(function(d) {
             return d.key;
         })
         .colors(chart_colors)
-        .legend(dc.legend().x(475).y(25).gap(3));
+        .legend(dc.legend().x(450).y(25).gap(3));
     // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
     // TODO LOOK OVER THE BELOW CODE TO TRY AND GET TITLE WORKING
     // .title(function(d) {
