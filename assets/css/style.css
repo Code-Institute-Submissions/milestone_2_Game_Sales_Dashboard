@@ -8,9 +8,9 @@
     margin-bottom: 10px;
 }
 
-/* The make-space class creates space from the top of the page, meaning the main content is pushed far enough down so that it isn't hidden by the title-bar*/
-.make-space {
-    min-height: 100px;
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
 }
 .content-wrapper {
     margin: 5px;
@@ -18,10 +18,15 @@
 .content {
     padding: 5px 10px;
 }
-.main-content {
-    text-align: center;
+
+.row {
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
+p {
+    padding-top: 5px;
+}
 
 
 /* ----- COLOURS ----- */
@@ -37,6 +42,7 @@
 
 /* ----- HEADER ----- */
 
+/* The below style rule allows for the header to stay fixed at the top of the screen at all times. This allows for easier use of the dashboard on all devices, as it saves the user having to scroll all the way back to the top of the page to reset the filters, this is aimed towards a positive user experience.*/
 .title-bar {
     padding-top: 10px;
     margin: 0;
@@ -44,7 +50,6 @@
     left: 0;
     position: fixed;
     z-index: 1;
-    width: 100%;
     background-color: #107c10;
     border-bottom: 1px solid #107c10;
     display: flex;
@@ -57,22 +62,24 @@
     font-size: 25px;
     margin: 10px 20px;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .reset-filters {
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #c6b6b6;
+    background-color: #727375;
 }
-
 .reset-filters,
 .reset-filters:focus,
 .reset-filters:active:focus {
     outline: none;
 }
-
+/* The below css causes the reset filters button to change to a darker grey color on hover, this is just a nice touch and allows the user to know they are interacting with a usable button */
 .reset-filters:hover {
-    background-color: #6b6b6b;
+    background-color: #555656;
     transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
@@ -82,6 +89,14 @@
 
 
 /*----- Main Content -----*/
+/* The padding creates space from the top of the page, meaning the main content is pushed far enough down so that it isn't hidden by the title-bar*/
+.main-content {
+    padding-top: 120px;
+    text-align: center;
+    font-family: sans-serif;
+    padding-right: 5px;
+    padding-left: 5px;
+}
 
 .selector {
     color: #000000;
@@ -90,7 +105,7 @@
 
 .page-background {
     z-index: -1;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     position: fixed;
 
@@ -106,6 +121,7 @@
     background-color: #107c10;
     justify-content: space-around;
     position: relative;
+    width: 100%;
 }
 
 .footer-content {
@@ -145,6 +161,16 @@
 .stacked-bar-chart,
 .pie-chart{
     fill: #ffffff;
+    width: 100%;
+    height:100%;
+}
+
+.pie-chart{
+    padding-left: 50px;
+}
+
+svg {
+    width: 100%;
 }
 
 /* Code below changes the color of the ticks on the charts charts used */
@@ -153,10 +179,43 @@
     stroke: #ffffff;;
 }
 
-/*--- Bar Charts Axis Labels ---*/
-/*--- #publisher-global-sales .x.axis label,
-#north-america-genre-sales .x.axis label,
-#europe-genre-sales .x.axis label,
-#rest-of-world-genre-sales .x.axis label{
-}---/*
+.dc-legend {
+    font-size: 8px;
+}
 
+/*--- Media Queries ---*/
+@media (min-width: 768px) {
+    .pie-chart{
+       padding-left: 20px;
+    }
+    .europe-bar{
+        padding-top: 40px;
+    }
+    .main-content {
+        padding-top: 100px;
+    }
+    .dc-select-menu{
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 960px) {
+    .pie-chart{
+        padding-left: 50px;
+    }
+    .europe-bar{
+        padding-top: 10px;
+    }
+    .dc-select-menu{
+        font-size: inherit;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pie-chart{
+        padding-left: 90px;
+    }
+    .europe-bar{
+        padding-top: 30px;
+    }
+}
