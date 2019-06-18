@@ -2,30 +2,30 @@
 ## Game Sales Dashboard
 By Martin Crowley
 
-###User Experience (UX)
-####Project Purpose
+### User Experience (UX)
+#### Project Purpose
 I am focusing on creating a Data dashboard aimed towards helping future game developers find the most popular games and genres of games on the two leading games consoles (PS4/XBoxOne) and to show them the publishers that are accredited to/have links to those best-selling games.
 
 The data dashboard will use both D3 and DC to plot multiple charts that will focus on different aspects of the dataset that I am using. The information I will mainly focus on is the sales numbers from each different region (that make the global sales total), as well as the genre type for each game, and the publisher of each respective game. This will give a better understanding of the publishers that consecutively produce commercially successful games, as well as seeing which genres succeed the most in the current video game market.
 
 The primary target audience are developers that are looking at which publishers to look towards when developing a game, and publishers/developers when wanting to see what genres of game are the most commercially successful in the current game market. The data dashboard may also be used by people wanting to look up on the best-selling games/genres for personal use to track trends or just study the data.
 
-#####Why would a user want this?
+##### Why would a user want this?
 Gaming is a tremendously popular pastime, and due to the sheer growth in people owning games consoles – (with PS4 sales reaching 91.6 Million, and XBoxOne sales being estimated at around 40 million in January 2019(https://www.forbes.com/sites/erikkain/2019/01/11/putting-the-playstation-4s-91-6-million-sales-into-context/#5f1d8ee36c50)) there is never going to be a shortage of people looking to buy new software/games to play.
 
 Therefore for game developers and publishers, it is important to understand what sells in the current video games market, and what games (and therefore genres) have amassed large numbers of sales. For developers it’s also beneficial to know which publishers were on board with which games, as often the PR/marketing/etc… that publishers take care of, could have had an influence on why a game did so well.
 
-#####Why is this so special?
+##### Why is this so special?
 The Data dashboard will stand out as it will have graphs that are easy to read and comprehend, and these will present the dataset in a way that provides the user with all of the required information, but none of the hassle involved in sorting it into a user-friendly format.
 
-####User Experience
+#### User Experience
 There will be clean, well presented data in easy to understand/read format (graphs, charts, etc…), this will be the main draw to the dashboard.
 
 The dashboard will also have responsive design, so it can display correctly on mobile devices, right through to large desktops, therefore allowing the information to be accessed and viewed properly no matter where you are or what device you are using.
 
 There will also be text included on the page to explain the data/statistics being seen on screen, giving further knowledge/context to the data being displayed, so as to let the user take away a greater understanding of the data from the dashboard.
 
-####User Stories
+#### User Stories
 - As a user, I'd like to see clean, well presented data in easy to understand/read format (graphs, charts, etc…)
 - As a user, I'd like to see a variety of charts/graphs to show different data in the dataset
 - As a user, I’d like for the dashboard to be made so that it will work and adapt to all manner of devices (responsive design)
@@ -36,13 +36,13 @@ There will also be text included on the page to explain the data/statistics bein
 - As a user I would like to be able to compare data from the same chart by selecting more than one genre/publisher at a time, this allows for easy comparison to be made between data of the same kind
 - As a user, I'd like to be able to reset all the filters placed through clicks on the graphs with a simple button (therefore reverting the data shown on the graphs back to the default data) 
 
-####Design Ideas
+#### Design Ideas
 When thinking about the layout and the design of the dashboard, I wanted it to be eye-catching and to stand out, yet to also look professional and of a high standard. I broke the design down into various style decisions:
 
-#####Font
+##### Font
 I will be using “Sans-Serif” for the dashboard’s main font type, as this is a modern, professional looking font that is easy to read.
 
-#####Colour Scheme
+##### Colour Scheme
 I am using the “Slate” theme from: https://bootswatch.com 
 
 It has a nice contrast of colour: with the navbar being custom styled to the official XBOX ONE green colour, the background will also have a nice stylised picture of a PS4 controller with deep greens and blacks, and the writing will stand out as a nice bold white on top of everything else.
@@ -53,14 +53,14 @@ I’d also like to use the same XBOX Green and official Playstation Blue as two 
 https://www.designpieces.com/palette/xbox-one-colour-palette-hex-rgb/
 https://www.designpieces.com/palette/ps4-colour-palette-hex-and-rgb/
 
-####Wireframes
+#### Wireframes
 For my wireframes, I designed these by hand for both Mobile, and Tablet/Desktop.
 Knowing full well that "Charts using D3.js are not responsive as they are designed for desktop or large-screen viewing", I opted to design the final set of wireframes for the desktop, as this was just the final layout for how things would sit, the functionality and mobile layout would be the same as before due to the xs screen size (meaning each chart would take up the full screen width on mobile), whereas the desktop layout would need to be arranged due to working out breakpoints and screen widths.
 
 These wireframes have been included and are able to be viewed in a seperate directory/folder called "Wireframes", which have subdirectories called "Desktop" and "Mobile".
 
-####Features
-#####Current Features
+#### Features
+##### Current Features
 - Feature 1 - Top title bar with Reset Filters button
     - The top bar contains the name of the site and also a button that when clicked, resets all the filters back to their default values.
     - The bar is fixed to the top of the page so even when the user scrolls down, the user can quickly and easily reset the filters at any point. This avoids the need for constant scrolling up and down the page.
@@ -83,11 +83,11 @@ These wireframes have been included and are able to be viewed in a seperate dire
     - The row chart is used to show the Global number of sales per genre.
     - The row chart for the Global sales per publisher will be a stacked row chart, this is due to the focus on genre allowing to display sales from all areas of the world individually in bar charts, therefore painting a better picture of that area of the dataset, so I thought it would only be fair to produce a stacked row chart for the global sales per publisher, meaning the data shown is more in depth
 
-#####Future Features
+##### Future Features
 - Feature 1 - Section to display individual game information
     - Currently, there will be a filter box that allows you to see all the games in the dataset, however I would eventually like include a separate section either at the bottom or in the form of a pop-up modal  - so that when you select an individual game from the list it will display the information on that game including a synopsis, the genre of the game, it’s publisher, as well as the number of sales per region/globally that it has.
 
-####Technologies Used
+#### Technologies Used
 The following technologies were used in the design and build of this project.
 - WebStorm
     - WebStorm IDE was used to write the HTML, CSS and JavaScript.
@@ -108,7 +108,7 @@ The following technologies were used in the design and build of this project.
 Other libraries
 •	dc.min.css
 
-####Testing
+#### Testing
 When testing the website, I carried out testing locally in WebStorm and on GITHUB pages using Chrome developer tools. On chrome developer tools I tested its functionality on simulated devices, in both portrait and the landscape views. The simulated devices that the website was tested on were:
 - Galaxy S5
 - Pixel 2
@@ -209,14 +209,14 @@ Once the project/website was in the dedicated GitHub repository, it was then abl
 The website can be found here: 
 https://mcrowley93.github.io/milestone_2_Game_Sales_Dashboard/ 
 
-####Credits
-#####Content
+#### Credits
+##### Content
 Code for the data dashboard was written by myself with knowledge I’ve picked up from the code institute course.
 
-#####Code used from others
+##### Code used from others
 I received help with an issue I had of rotating the x-axis text from User: “davisford” (commented on 18 Oct 2014) - https://github.com/dc-js/dc.js/issues/731
 
-#####Dataset
+##### Dataset
 The source dataset was obtained from kaggle, from user SID_TWR. (PS4 data: https://www.kaggle.com/sidtwr/videogames-sales-dataset#PS4_GamesSales.csv , XBOX ONE data: https://www.kaggle.com/sidtwr/videogames-sales-dataset#XboxOne_GameSales.csv)
 
 The original .csv files had hundreds of entries in, so I condensed the data I needed down to 100 entries from each csv file, and then I put them into a custom csv file called “gamesales.csv”.
@@ -225,12 +225,12 @@ The csv file also contain an additional column of data (for “japan”), but th
 
 In the dataset, the data entries were done to 2 decimal places, it would often mean the “global” data would total more than the 3 data columns (North America, Europe & Rest of World) added together (where the data doesn’t show exact figures below the 2 decimal places). In these situations, the data was rounded so that the values would be identical when appearing on a chart so as to not cause confusion or irregularities.
 
-#####Media
+##### Media
 ps4-controller-green-light: Photo by Nikoloz Ergemlidze on Unsplash (https://unsplash.com/photos/v5STLzdFEPs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText )
 
 kaggle-logo: https://commons.wikimedia.org/wiki/File:Kaggle_logo.png
 
-#####Acknowledgements
+##### Acknowledgements
 - Spencer Barriball - My Code Institude assigned mentor and fellow video game enthusiast, for his invaluable knowledge, guidance and advice.
 - Dave Laffan (Dave L _lead) for hosting a slack call, talking myself and various others through his milestone project to give us a greater understanding of interactive frontend dashboards, and taking the time to answer any questions we had regarding interactive data dashboards.
 - My Father - For supporting me with all I do and for helping to grow my passion for gaming to what it is today.
