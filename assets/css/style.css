@@ -141,6 +141,16 @@ p {
     opacity: 0.8;
 }
 
+.footer-links{
+    text-decoration: none;
+}
+
+.footer-links:focus,
+.footer-links:hover {
+    color: #727375;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
 
 
 /*--- Charts ---*/
