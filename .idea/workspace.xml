@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d3154b85-ad33-4990-9ea6-bc3633a0fef1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/ps4-controller-home.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/graph.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/gamesalesData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/gamesalesData.csv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,34 +25,38 @@
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state>
-              <caret column="75" lean-forward="true" selection-start-column="75" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="150" column="13" lean-forward="true" selection-start-line="150" selection-start-column="13" selection-end-line="150" selection-end-column="13" />
+            <state relative-caret-position="-1365">
+              <caret line="73" column="75" lean-forward="true" selection-start-line="73" selection-start-column="75" selection-end-line="73" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="98" column="1" lean-forward="true" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="263" column="257" selection-start-line="263" selection-start-column="257" selection-end-line="263" selection-end-column="257" />
+            <state relative-caret-position="152">
+              <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
               <folding>
                 <element signature="n#head#0;n#html#0;n#!!top" />
                 <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#article#0;n#div#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#article#1;n#div#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#article#2;n#div#0;n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#article#0;n#div#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#article#1;n#div#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#article#0;n#div#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#article#1;n#div#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#article#2;n#div#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#article#0;n#div#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#article#1;n#div#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
@@ -63,8 +69,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/graph.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="266" column="102" selection-start-line="266" selection-start-column="102" selection-end-line="266" selection-end-column="102" />
+            <state relative-caret-position="493">
+              <caret line="111" column="34" selection-start-line="111" selection-start-column="34" selection-end-line="111" selection-end-column="34" />
+              <folding>
+                <element signature="n#!!block;n#makeGraphs#0" />
+                <element signature="n#!!block;n#game_selector#0" />
+                <element signature="n#!!block;n#console_selector#0" />
+                <element signature="n#!!block;n#genre_selector#0" />
+                <element signature="n#!!block;n#publisher_selector#0" />
+                <element signature="n#!!block;n#console_game_sales_comparison#0" />
+                <element signature="n#!!block;n#global_genre_sales#0" />
+                <element signature="n#!!block;n#global_publisher_sales#0" />
+                <element signature="n#!!block;n#north_america_genre_sales#0" />
+                <element signature="n#!!block;n#europe_genre_sales#0" />
+                <element signature="n#!!block;n#rest_of_world_genre_sales#0" />
+                <element signature="n#!!block;n#genre_comparison#0" />
+                <element signature="n#!!block;n#publisher_comparison#0" />
+                <element signature="n#!!block;n#three_decimal_places#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,8 +95,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="68">
-                <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+              <first_editor relative-caret-position="204">
+                <caret line="235" column="112" selection-start-line="235" selection-start-column="112" selection-end-line="235" selection-end-column="112" />
               </first_editor>
               <second_editor />
             </state>
@@ -101,18 +123,46 @@
       <find>Warner Bros.</find>
       <find>bootstrap.min</find>
       <find>reset-filters</find>
-      <find>Adventure</find>
       <find>col-12</find>
       <find>c2c2c2</find>
       <find>#4fedff</find>
+      <find>return k + &quot; genre has &quot; + v + &quot; games in the top 100's.&quot;;</find>
+      <find>million games sold in Europe</find>
+      <find>in North America</find>
+      <find>return k + &quot; has &quot; + v + &quot; games in the top 100's.&quot;;</find>
+      <find>Globally.</find>
+      <find>Adventure</find>
+      <find>,</find>
+      <find>assassin's Creed IV</find>
+      <find>var</find>
+      <find>Warner Bros Interactive</find>
+      <find>Gearbox Software</find>
+      <find>Misc</find>
     </findStrings>
     <replaceStrings>
       <replace>XBOX-ONE</replace>
       <replace>&lt;br&gt;</replace>
-      <replace>WB.</replace>
       <replace>col-xs-12</replace>
       <replace>78727c</replace>
       <replace>#4f9eff</replace>
+      <replace>return k + &quot; genre has &quot; + v + &quot; million games sold in North America.&quot;;</replace>
+      <replace>million games sold in Europe</replace>
+      <replace>million games sold in Europe</replace>
+      <replace>million games sold in the Rest of the World</replace>
+      <replace>games sold in the Rest of the World</replace>
+      <replace>recorded sales of games in top 100's in</replace>
+      <replace>return &quot;In the Top 100's, the &quot; + k + &quot; genre has &quot; + v + &quot; million games sold in</replace>
+      <replace>Globally</replace>
+      <replace>genre has sold</replace>
+      <replace>genre has sold</replace>
+      <replace>million games</replace>
+      <replace>return &quot;In the Top 100's, &quot; + k + &quot; has sold  &quot; + v + &quot; million games Globally.&quot;;</replace>
+      <replace>in...</replace>
+      <replace>WB.</replace>
+      <replace>let</replace>
+      <replace>I.E</replace>
+      <replace>Warner Bros</replace>
+      <replace>Warner Bros I.E</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -121,7 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/assets/css/dc.min.css" />
         <option value="$PROJECT_DIR$/assets/js/dc.min.js" />
         <option value="$PROJECT_DIR$/data/gamesales.csv" />
@@ -130,12 +179,13 @@
         <option value="$PROJECT_DIR$/assets/js/jquery.js" />
         <option value="$PROJECT_DIR$/assets/js/jquery.min.js" />
         <option value="$PROJECT_DIR$/assets/js/reset_filters.js" />
-        <option value="$PROJECT_DIR$/data/gamesalesData.csv" />
         <option value="$PROJECT_DIR$/assets/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/assets/js/d3.min.js" />
-        <option value="$PROJECT_DIR$/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/assets/js/graph.js" />
+        <option value="$PROJECT_DIR$/data/gamesalesData.csv" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/assets/js/graph.js" />
+        <option value="$PROJECT_DIR$/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -196,11 +246,17 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wireframes/Mobile" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Martin Crowley\code\milestone_2_Game_Sales_Dashboard\wireframes\Mobile" />
+      <recent name="C:\Users\Martin Crowley\code\milestone_2_Game_Sales_Dashboard\wireframes\Desktop" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Martin Crowley\code\milestone_2_Game_Sales_Dashboard\wireframes\Desktop" />
       <recent name="C:\Users\Martin Crowley\code\milestone_2_Game_Sales_Dashboard\assets\images" />
       <recent name="C:\Users\Martin Crowley\code\milestone_2_Game_Sales_Dashboard\data" />
     </key>
@@ -228,12 +284,12 @@
       <option name="presentableId" value="Default" />
       <updated>1559408262994</updated>
       <workItem from="1559408268599" duration="830000" />
-      <workItem from="1559409134241" duration="149711000" />
+      <workItem from="1559409134241" duration="210735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150541000" />
+    <option name="totallyTimeSpent" value="211565000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -433,16 +489,81 @@
       </provider>
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="75" lean-forward="true" selection-start-column="75" selection-end-column="75" />
+        <state relative-caret-position="-1365">
+          <caret line="73" column="75" lean-forward="true" selection-start-line="73" selection-start-column="75" selection-end-line="73" selection-end-column="75" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+          <folding>
+            <element signature="n#head#0;n#html#0;n#!!top" />
+            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#article#0;n#div#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#article#1;n#div#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#article#2;n#div#0;n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#article#0;n#div#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#article#1;n#div#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#article#0;n#div#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#article#1;n#div#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#article#2;n#div#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#article#0;n#div#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#article#1;n#div#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#9318#9324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/graph.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="111" column="34" selection-start-line="111" selection-start-column="34" selection-end-line="111" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!block;n#makeGraphs#0" />
+            <element signature="n#!!block;n#game_selector#0" />
+            <element signature="n#!!block;n#console_selector#0" />
+            <element signature="n#!!block;n#genre_selector#0" />
+            <element signature="n#!!block;n#publisher_selector#0" />
+            <element signature="n#!!block;n#console_game_sales_comparison#0" />
+            <element signature="n#!!block;n#global_genre_sales#0" />
+            <element signature="n#!!block;n#global_publisher_sales#0" />
+            <element signature="n#!!block;n#north_america_genre_sales#0" />
+            <element signature="n#!!block;n#europe_genre_sales#0" />
+            <element signature="n#!!block;n#rest_of_world_genre_sales#0" />
+            <element signature="n#!!block;n#genre_comparison#0" />
+            <element signature="n#!!block;n#publisher_comparison#0" />
+            <element signature="n#!!block;n#three_decimal_places#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-5.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-3.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-1.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="68">
-            <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <first_editor relative-caret-position="204">
+            <caret line="235" column="112" selection-start-line="235" selection-start-column="112" selection-end-line="235" selection-end-column="112" />
           </first_editor>
           <second_editor />
         </state>
@@ -450,35 +571,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="150" column="13" lean-forward="true" selection-start-line="150" selection-start-column="13" selection-end-line="150" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/graph.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="266" column="102" selection-start-line="266" selection-start-column="102" selection-end-line="266" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="263" column="257" selection-start-line="263" selection-start-column="257" selection-end-line="263" selection-end-column="257" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#article#0;n#div#0;n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#article#2;n#div#0;n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#article#0;n#div#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#article#1;n#div#0;n#section#2;n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#article#0;n#div#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#article#1;n#div#0;n#section#3;n#section#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#9318#9324#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="98" column="1" lean-forward="true" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
         </state>
       </provider>
     </entry>
