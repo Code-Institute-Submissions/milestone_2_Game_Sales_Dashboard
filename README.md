@@ -123,8 +123,6 @@ When testing the website, I carried out testing locally in WebStorm and on GITHU
 
 I have also tested the website both locally and remotely on actual devices (rather than just simulated ones on Google Chrome tools), these devices consisted of:
 - iPhone 6s
-- iPhone 7
-- iPhone X
 - iPad (generation 2)
 - Sony Xperia
 - Multiple desktops (various sizes)
@@ -181,13 +179,13 @@ Some examples of the physical testing carried out by myself on certain parts of 
 
 I also ensured that I went onto https://jshint.com/ to check for errors in the code I had written, and JSHint found 4 instances of undefined variables (queue, d3, crossfilter, dc) however this was not an issue as they all refer to external libraries. 
 
-When using a fixed background image in my previous project I had encountered a bug wherein the fixed background image that was applied to the main content container worked fine and would allow the content to be scrolled and for the image to remain fixed, when viewing the website on the simulated mobile and tablet devices on google chrome tools. Yet the functionality wouldn’t work properly on various actual mobile/tablet devices as the background would be stretched across the entire length of the content that was inside the main content container. So with this data dashboard I opted instead to create a separate dedicated div for the background which allows for the picture to stay fixed and to cover the background of the webpage, (as opposed to covering the entire background of the content and therefore making it impossible to make out what the image is) and also allows for the content to be scrolled over the image, rather than the image to be stretched and scrolled with the content.
-
 I encountered an issue where I found that I was repeatedly using: “Number.parseFloat(number).toFixed(3)” in my functions to get 3 decimal places, so in order to adhere to the DRY principle (Don't Repeat Yourself) I made this into a separate function and called it throughout my code, making the code look a lot more professional and clean.
 
 I also had an issue where the page seemed to be rendering larger than the actual page width. I looked further at the code and realised that the width of the charts was making the page appear wider than it should be (however the footer wasn’t stretching fully across the bottom of the page, nor was the header reacting the way it should and wrapping on xs screen sizes. I got around this issue by lowering removing the width attribute from each of the graphs, and setting useViewBoxResizing(true) and by using a css class style to enable to svg(charts) to have a responsive width by setting their width to 100% (which then gets its width from its parent element). This could not be done for the pie charts however so I had to look at setting a width for the pie charts that would work on all of the different bootstrap breakpoints for different devices. Media queries were also used to help the charts reposition more effectively depending on the screen size of the device being used.
 
 Another issue was that “Charts using D3.js are not responsive as they are designed for desktop or large-screen viewing” , therefore certain information from the graphs is displayed on hover, which requires a mouse to actually view. This doesn’t take away from the base information being shown to mobile users, but it means that they might not be able to see the exact specific figures that would be shown on hover.
+###### Known issues
+When carrying out my testing, there was one minor bug I have encountered, which is that when trying to use a fixed background image there is an issue wherein the fixed background image that was applied to the data dashboard worked fine and would allow the content to be scrolled and for the image to remain fixed when viewing the website on the simulated mobile and tablet devices on google chrome tools, yet the functionality wouldn’t work properly on various actual mobile/tablet devices as the background wouldn’t fit across the entire vertical length of the main content container. I will look into this issue in the future and try to resolve it.
 
 #### Deployment
 My dashboard was coded in WebStorm. Once I had created the workspace in WebStorm for my project to be built in, I then turned to GitHub (which is a web-based interface that links with Git and allows you to store and view the different versions of code at the stages it was pushed to the GitHub server) and created a repository for my milestone project, I then went back to WebStorm, and into the terminal I pasted in the Command Line Interface commands that GitHub had provided me with to create a local Git repository and form a link between Git and the GitHub server.
