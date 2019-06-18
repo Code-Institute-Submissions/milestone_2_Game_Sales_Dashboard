@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3154b85-ad33-4990-9ea6-bc3633a0fef1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/graph.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/graph.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/gamesalesData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/gamesalesData.csv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -91,12 +87,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="204">
-                <caret line="235" column="112" selection-start-line="235" selection-start-column="112" selection-end-line="235" selection-end-column="112" />
+              <first_editor relative-caret-position="153">
+                <caret line="232" column="5" selection-start-line="232" selection-end-line="232" selection-end-column="5" />
               </first_editor>
               <second_editor />
             </state>
@@ -138,6 +134,7 @@
       <find>Warner Bros Interactive</find>
       <find>Gearbox Software</find>
       <find>Misc</find>
+      <find>#####</find>
     </findStrings>
     <replaceStrings>
       <replace>XBOX-ONE</replace>
@@ -163,6 +160,8 @@
       <replace>I.E</replace>
       <replace>Warner Bros</replace>
       <replace>Warner Bros I.E</replace>
+      <replace>####</replace>
+      <replace>#####</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -284,12 +283,12 @@
       <option name="presentableId" value="Default" />
       <updated>1559408262994</updated>
       <workItem from="1559408268599" duration="830000" />
-      <workItem from="1559409134241" duration="210735000" />
+      <workItem from="1559409134241" duration="211158000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211565000" />
+    <option name="totallyTimeSpent" value="211988000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -559,20 +558,20 @@
     <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="204">
-            <caret line="235" column="112" selection-start-line="235" selection-start-column="112" selection-end-line="235" selection-end-column="112" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="98" column="1" lean-forward="true" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="153">
+            <caret line="232" column="5" selection-start-line="232" selection-end-line="232" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
