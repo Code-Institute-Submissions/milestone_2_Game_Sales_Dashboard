@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3154b85-ad33-4990-9ea6-bc3633a0fef1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-New1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-New2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-Hand-Drawn.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-Hand-Drawn2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="152" column="1" lean-forward="true" selection-start-line="152" selection-start-column="1" selection-end-line="152" selection-end-column="1" />
+            <state relative-caret-position="193">
+              <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -313,12 +305,12 @@
       <option name="presentableId" value="Default" />
       <updated>1559408262994</updated>
       <workItem from="1559408268599" duration="830000" />
-      <workItem from="1559409134241" duration="213958000" />
+      <workItem from="1559409134241" duration="214861000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214788000" />
+    <option name="totallyTimeSpent" value="215691000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -331,6 +323,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18377976" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -609,8 +602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="152" column="1" lean-forward="true" selection-start-line="152" selection-start-column="1" selection-end-line="152" selection-end-column="1" />
+        <state relative-caret-position="193">
+          <caret line="107" column="17" selection-start-line="107" selection-start-column="17" selection-end-line="107" selection-end-column="17" />
         </state>
       </provider>
     </entry>
