@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3154b85-ad33-4990-9ea6-bc3633a0fef1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-New1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-New2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-Hand-Drawn.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-Hand-Drawn2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-5.jpg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -162,9 +171,9 @@
       <replace>let</replace>
       <replace>I.E</replace>
       <replace>Warner Bros</replace>
-      <replace>Warner Bros I.E</replace>
       <replace>####</replace>
       <replace>#####</replace>
+      <replace>Warner Bros I.E</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -237,6 +246,23 @@
               <item name="milestone_2_Game_Sales_Dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="milestone_2_Game_Sales_Dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="milestone_2_Game_Sales_Dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="wireframes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="milestone_2_Game_Sales_Dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="milestone_2_Game_Sales_Dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="wireframes" type="462c0819:PsiDirectoryNode" />
+              <item name="Desktop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="milestone_2_Game_Sales_Dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="milestone_2_Game_Sales_Dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="wireframes" type="462c0819:PsiDirectoryNode" />
+              <item name="Mobile" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -259,6 +285,7 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Martin Crowley\code\milestone_2_Game_Sales_Dashboard\wireframes\Desktop" />
+      <recent name="C:\Users\Martin Crowley\code\milestone_2_Game_Sales_Dashboard\wireframes" />
       <recent name="C:\Users\Martin Crowley\code\milestone_2_Game_Sales_Dashboard\assets\images" />
       <recent name="C:\Users\Martin Crowley\code\milestone_2_Game_Sales_Dashboard\data" />
     </key>
@@ -286,12 +313,12 @@
       <option name="presentableId" value="Default" />
       <updated>1559408262994</updated>
       <workItem from="1559408268599" duration="830000" />
-      <workItem from="1559409134241" duration="213735000" />
+      <workItem from="1559409134241" duration="213958000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214565000" />
+    <option name="totallyTimeSpent" value="214788000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -519,22 +546,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-1.jpg">
+    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-2.jpg">
+    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-4.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-4.jpg">
+    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-5.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-5.jpg">
+    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-3.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-1.jpg">
+    <entry file="file://$PROJECT_DIR$/wireframes/Mobile/Mobile-Wireframe-Hand-Drawn-1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -573,6 +597,15 @@
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-New1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-New2.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wireframes/Desktop/Desktop-Wireframe-Hand-Drawn.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
