@@ -11,7 +11,7 @@ The data dashboard will use both D3 and DC to plot multiple charts that will foc
 The primary target audience are developers that are looking at which publishers to look towards when developing a game, and publishers/developers when wanting to see what genres of game are the most commercially successful in the current game market. The data dashboard may also be used by people wanting to look up on the best-selling games/genres for personal use to track trends or just study the data.
 
 ##### Why would a user want this?
-Gaming is a tremendously popular pastime, and due to the sheer growth in people owning games consoles – (with PS4 sales reaching 91.6 Million, and XBoxOne sales being estimated at around 40 million in January 2019(https://www.forbes.com/sites/erikkain/2019/01/11/putting-the-playstation-4s-91-6-million-sales-into-context/#5f1d8ee36c50)) there is never going to be a shortage of people looking to buy new software/games to play.
+Gaming is a tremendously popular pastime, and due to the sheer growth in people owning games consoles – (with PS4 sales reaching 91.6 Million, and XBoxOne sales being estimated at around 40 million in January 2019 (statistics taken from <a href="https://www.forbes.com/sites/erikkain/2019/01/11/putting-the-playstation-4s-91-6-million-sales-into-context/#5f1d8ee36c50" target="_blank">Forbes</a>)) there is never going to be a shortage of people looking to buy new software/games to play.
 
 Therefore for game developers and publishers, it is important to understand what sells in the current video games market, and what games (and therefore genres) have amassed large numbers of sales. For developers it’s also beneficial to know which publishers were on board with which games, as often the PR/marketing/etc… that publishers take care of, could have had an influence on why a game did so well.
 
@@ -43,15 +43,13 @@ When thinking about the layout and the design of the dashboard, I wanted it to b
 I will be using “Sans-Serif” for the dashboard’s main font type, as this is a modern, professional looking font that is easy to read.
 
 ##### Colour Scheme
-I am using the “Slate” theme from: https://bootswatch.com 
+I am using the “Slate” theme from <a href="https://bootswatch.com" target="_blank">Bootswatch</a>
 
 It has a nice contrast of colour: with the navbar being custom styled to the official XBOX ONE green colour, the background will also have a nice stylised picture of a PS4 controller with deep greens and blacks, and the writing will stand out as a nice bold white on top of everything else.
 
-- ps4-controller-green-light: Photo by Nikoloz Ergemlidze on Unsplash (https://unsplash.com/photos/v5STLzdFEPs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText )
+- ps4-controller-green-light: Photo by <a href="https://unsplash.com/photos/v5STLzdFEPs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Nikoloz Ergemlidze on Unsplash</a>
 
-I’d also like to use the same XBOX Green and official Playstation Blue as two of the main colours on the dashboard, this is to go with the theme of creating a dashboard about sales on PS4 (blue logo) and XboxOne (green logo).
-https://www.designpieces.com/palette/xbox-one-colour-palette-hex-rgb/
-https://www.designpieces.com/palette/ps4-colour-palette-hex-and-rgb/
+I’d also like to use the same <a href="https://www.designpieces.com/palette/xbox-one-colour-palette-hex-rgb/" target="_blank">XBOX Green</a> and official <a href="https://www.designpieces.com/palette/ps4-colour-palette-hex-and-rgb/" target="_blank">Playstation Blue</a> as two of the main colours on the dashboard, this is to go with the theme of creating a dashboard about sales on PS4 (blue logo) and XboxOne (green logo).
 
 #### Wireframes
 For my wireframes, I designed these by hand for both Mobile, and Tablet/Desktop.
@@ -179,7 +177,9 @@ Some examples of the physical testing carried out by myself on certain parts of 
     - This then filtered the data being shown on the dashboard down to the data applicable to “PS4” console type, the “Action” genre, and with “Ubisoft” as the publisher.
     - I then went to the Game selector at the top of the page, and it showed that the data had been filtered using the various pie charts and they were performing as they should be, as there were only 6 games showing (out of a possible 200) that were specific to all the filters currently being applied on the dashboard.
 
-I also ensured that I went onto https://jshint.com/ to check for errors in the code I had written, and JSHint found 4 instances of undefined variables (queue, d3, crossfilter, dc) however this was not an issue as they all refer to external libraries. 
+I used validators when checking my code. Running my HTML code through <a href="https://validator.w3.org/" target="_blank">W3 Html validator</a>, and my CSS code through <a href="https://jigsaw.w3.org/css-validator/validator" target="blank">Jigsaw/W3 CSS validator</a>.
+
+I also ensured that I went onto <a href="https://jshint.com/" target="_blank">JSHint</a> to check for errors in the code I had written, and JSHint found 4 instances of undefined variables (queue, d3, crossfilter, dc) however this was not an issue as they all refer to external libraries. 
 
 I encountered an issue where I found that I was repeatedly using: “Number.parseFloat(number).toFixed(3)” in my functions to get 3 decimal places, so in order to adhere to the DRY principle (Don't Repeat Yourself) I made this into a separate function and called it throughout my code, making the code look a lot more professional and clean.
 
@@ -195,7 +195,7 @@ My dashboard was coded in WebStorm. Once I had created the workspace in WebStorm
 - git init
 - git add README.md
 - git commit -m "first commit"
-- git remote add origin https://github.com/Mcrowley93/milestone_2_Game_Sales_Dashboard
+- git remote add origin <a href="https://github.com/Mcrowley93/milestone_2_Game_Sales_Dashboard" target="_blank">https://github.com/Mcrowley93/milestone_2_Game_Sales_Dashboard</a>
 - git push -u origin master
 
 Once I had done this, I was then able to use git commands in the CLI at various stages to add changes I had made within the workspace, to the staging area (storing files is a 2 step process). This was done using the command: ‘git add ‘ which could be followed with the specific file name/s that needed to be added to the staging area (prior to being committed to the repository). Alternatively, when there was a few changes that could be added all at once, the command was followed by a full stop (‘git add .’)
@@ -207,17 +207,17 @@ At this stage, the local Git repository could then be synced with the repository
 Once the project/website was in the dedicated GitHub repository, it was then able to be made live in the settings by using GitHub Pages.
 
 The website can be found here: 
-https://mcrowley93.github.io/milestone_2_Game_Sales_Dashboard/ 
+<a href="https://mcrowley93.github.io/milestone_2_Game_Sales_Dashboard/" target="_blank">https://mcrowley93.github.io/milestone_2_Game_Sales_Dashboard/ </a>
 
 #### Credits
 ##### Content
 Code for the data dashboard was written by myself with knowledge I’ve picked up from the code institute course.
 
 ##### Code used from others
-I received help with an issue I had of rotating the x-axis text from User: “davisford” (commented on 18 Oct 2014) - https://github.com/dc-js/dc.js/issues/731
+I received help with an issue I had of rotating the x-axis text from User: <a href="https://github.com/dc-js/dc.js/issues/731" target="_blank">davisford” (commented on 18 Oct 2014)</a>
 
 ##### Dataset
-The source dataset was obtained from kaggle, from user SID_TWR. (PS4 data: https://www.kaggle.com/sidtwr/videogames-sales-dataset#PS4_GamesSales.csv , XBOX ONE data: https://www.kaggle.com/sidtwr/videogames-sales-dataset#XboxOne_GameSales.csv)
+The source dataset was obtained from kaggle, from user <a href="https://www.kaggle.com/sidtwr" target="_blank">SID_TWR</a>: <a href="https://www.kaggle.com/sidtwr/videogames-sales-dataset#PS4_GamesSales.csv" target="_blank">PS4 data</a>, <a href="https://www.kaggle.com/sidtwr/videogames-sales-dataset#XboxOne_GameSales.csv" target="_blank">XBOX ONE data</a>
 
 The original .csv files had hundreds of entries in, so I condensed the data I needed down to 100 entries from each csv file, and then I put them into a custom csv file called “gamesales.csv”.
 
@@ -226,9 +226,9 @@ The csv file also contain an additional column of data (for “japan”), but th
 In the dataset, the data entries were done to 2 decimal places, it would often mean the “global” data would total more than the 3 data columns (North America, Europe & Rest of World) added together (where the data doesn’t show exact figures below the 2 decimal places). In these situations, the data was rounded so that the values would be identical when appearing on a chart so as to not cause confusion or irregularities.
 
 ##### Media
-ps4-controller-green-light: Photo by Nikoloz Ergemlidze on Unsplash (https://unsplash.com/photos/v5STLzdFEPs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText )
+ps4-controller-green-light: Photo by <a href="https://unsplash.com/photos/v5STLzdFEPs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Nikoloz Ergemlidze on Unsplash</a>
 
-kaggle-logo: https://commons.wikimedia.org/wiki/File:Kaggle_logo.png
+<a href="https://commons.wikimedia.org/wiki/File:Kaggle_logo.png" target="_blank">kaggle-logo</a>
 
 ##### Acknowledgements
 - Spencer Barriball - My Code Institude assigned mentor and fellow video game enthusiast, for his invaluable knowledge, guidance and advice.
