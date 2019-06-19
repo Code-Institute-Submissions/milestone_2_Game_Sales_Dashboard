@@ -37,6 +37,20 @@ p {
     color: #ffffff;
 }
 
+/*----- Body -----*/
+.page-background {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    background: url("../images/ps4-controller-green-light.jpg") no-repeat center fixed;
+    background-size: cover;
+    /* background image is fixed, so if the webpage contains a lot of content, it will be the content what gets scrolled, but the image stays fixed in place in the background */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
 
 
 /* ----- HEADER ----- */
@@ -100,25 +114,6 @@ p {
 .selector {
     color: #000000;
     margin-top: 10px;
-}
-
-/*.page-background {*/
-/*    height: 100vh;*/
-/*    width: 100%;*/
-/*    position: fixed;*/
-/*}*/
-
-.page-background {
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    position: relative;
-    background: url("../images/ps4-controller-green-light.jpg") no-repeat center fixed;
-    background-size: cover;
-    /* background image is fixed, so if the webpage contains a lot of content, it will be the content what gets scrolled, but the image stays fixed in place in the background */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
 }
 
 
