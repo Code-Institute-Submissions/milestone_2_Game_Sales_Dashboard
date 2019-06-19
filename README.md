@@ -128,6 +128,8 @@ I have also tested the website both locally and remotely on actual devices (rath
 - Multiple desktops (various sizes)
 
 Some examples of the physical testing carried out by myself on certain parts of the site include:
+- Checked for the correct amount of data
+    - I checked the amount of data entries by clicking on each of the selectors, and adding up the total for each of the numbers that were displayed per game/console/genre/publisher selectors, these all totalled 200, therefore indicating that the full dataset was present.
 - Reset Filters button
     - In order to test the reset filters button, I applied various filters by selecting a console type, genre type, publisher type and used multiple filters from the charts.
     - I then checked the data being shown was specific to the filters that had been applied.
@@ -184,7 +186,7 @@ I encountered an issue where I found that I was repeatedly using: “Number.pars
 I also had an issue where the page seemed to be rendering larger than the actual page width. I looked further at the code and realised that the width of the charts was making the page appear wider than it should be (however the footer wasn’t stretching fully across the bottom of the page, nor was the header reacting the way it should and wrapping on xs screen sizes. I got around this issue by lowering removing the width attribute from each of the graphs, and setting useViewBoxResizing(true) and by using a css class style to enable to svg(charts) to have a responsive width by setting their width to 100% (which then gets its width from its parent element). This could not be done for the pie charts however so I had to look at setting a width for the pie charts that would work on all of the different bootstrap breakpoints for different devices. Media queries were also used to help the charts reposition more effectively depending on the screen size of the device being used.
 
 Another issue was that “Charts using D3.js are not responsive as they are designed for desktop or large-screen viewing” , therefore certain information from the graphs is displayed on hover, which requires a mouse to actually view. This doesn’t take away from the base information being shown to mobile users, but it means that they might not be able to see the exact specific figures that would be shown on hover.
-###### Known issues
+###### Known Bugs
 When carrying out my testing, there was one minor bug I have encountered, which is that when trying to use a fixed background image for the body, there is an issue wherein the fixed background image that was applied to the data dashboard worked fine and would allow the content to be scrolled and for the image to remain fixed when viewing the website on the simulated mobile and tablet devices on google chrome tools, yet this functionality wouldn’t work properly on the iphone 6s/ipad that I currently own, as the background image would stretch across the entire vertical length of the dashboard. All other functionality works fine, and the background image displays as expected on desktops. I will look into this issue in the future and try to resolve it.
 
 #### Deployment
