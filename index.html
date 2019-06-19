@@ -21,272 +21,272 @@
 </head>
 <body>
     <header class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 title-bar">
-                <h1 class="title">Top 100 Video Game Sales Dashboard</h1>
-                <button type="button" onclick="location.reload()" class="btn reset-filters">Reset Filters</button>
-                <!-- Used a button with an onclick function to cause the page to reload when pressed/clicked -->
+            <div class="row">
+                <div class="col-xs-12 title-bar">
+                    <h1 class="title">Top 100 Video Game Sales Dashboard</h1>
+                    <button type="button" onclick="location.reload()" class="btn reset-filters">Reset Filters</button>
+                    <!-- Used a button with an onclick function to cause the page to reload when pressed/clicked -->
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
     <!-- Have opted to use a seperate dedicated div for the background image, which allows the picture to remain fixed and the content to scroll over it  -->
-    <div class="container-fluid"><img src="assets/images/ps4-controller-green-light.jpg" class="page-background" alt="Green and black background image of a PS4 controller"/></div>
+<!--<div class="container-fluid"><img src="assets/images/ps4-controller-green-light.jpg" class="page-background" alt="Green and black background image of a PS4 controller"/></div>-->
     <!-- Main Content -->
-    <section class="container-fluid main-content">
-        <section class="container-fluid">
-                <div class="row">
-                    <!-- Introduction and Game Selector/Filter -->
-                    <article class="col-xs-12 col-sm-4">
-                        <div class="content-wrapper">
-                            <div class="content">
-                                <h2 class="headings">Introduction</h2>
-                                <p>
-                                    Gaming is a tremendously popular pastime, and due to the sheer growth in people owning games consoles it is important for new and existing game developers and publishers, to understand what sells in the current video games market, and what games (and therefore genres) have amassed large numbers of sales.<br>
-                                    For developers it’s also beneficial to know which publishers were on board with which games. Therefore the aim of this data dashboard is to show the top 100 games (in sales alone) from both the PS4 and the XBOX ONE, and  ultimately help the target audience (developers/publishers) make a more informed decision when it comes to deciding on a game to create.
-                                </p>
+    <section class="container-fluid main-content page-background">
+            <section class="container-fluid">
+                    <div class="row">
+                        <!-- Introduction and Game Selector/Filter -->
+                        <article class="col-xs-12 col-sm-4">
+                            <div class="content-wrapper">
+                                <div class="content">
+                                    <h2 class="headings">Introduction</h2>
+                                    <p>
+                                        Gaming is a tremendously popular pastime, and due to the sheer growth in people owning games consoles it is important for new and existing game developers and publishers, to understand what sells in the current video games market, and what games (and therefore genres) have amassed large numbers of sales.<br>
+                                        For developers it’s also beneficial to know which publishers were on board with which games. Therefore the aim of this data dashboard is to show the top 100 games (in sales alone) from both the PS4 and the XBOX ONE, and  ultimately help the target audience (developers/publishers) make a more informed decision when it comes to deciding on a game to create.
+                                    </p>
+                                </div>
+                                <br>
+                                <div class="dropdown-filter">
+                                    <h3 class="sub-headings">Games - </h3>
+                                    <div id="game-selector" class="selector"></div>
+                                </div>
+                                <div class="content">
+                                    <p>
+                                       The game selection/filter above will display all the games listed in the top 100 for each of the consoles by default this will change based on what filters have been applied and what games subsequently fit into the parameters set by the filters used.
+                                        (For games that occur on BOTH the PS4 AND the XBOX ONE, the number '2' will appear next to the name of the game. However, if the game only has the number '1' next to it's name, this is because the game only appears on top 100 for ONE of the consoles)
+                                    </p>
+                                </div>
                             </div>
-                            <br>
-                            <div class="dropdown-filter">
-                                <h3 class="sub-headings">Games - </h3>
-                                <div id="game-selector" class="selector"></div>
+                        </article>
+                        <!-- Filter/Selector section -->
+                        <article class="col-xs-12 col-sm-4">
+                            <div class="content-wrapper">
+                                <div class="content">
+                                    <h2 class="headings">Filter/Selectors</h2>
+                                    <p>
+                                        In this section there are many filters/selectors provided to allow for the data to be filtered down to find the information that is required to help you the most.
+                                    </p>
+                                </div>
+                                <div class="dropdown-filter">
+                                    <h3 class="sub-headings">Console - </h3>
+                                    <div id="console-selector" class="selector"></div>
+                                    <p>
+                                        The console selector/filter above will allow you to filter the data on the dashboard by choosing all the data from the consoles, or choosing which console to specifically filter the dashboard's data down to. The selector also allows you to see how many games belong to each console (this figure will change as other filters are applied.)
+                                    </p>
+                                </div>
+                                <div class="dropdown-filter">
+                                    <h3 class="sub-headings">Genre - </h3>
+                                    <div id="genre-selector" class="selector"></div>
+                                    <p>
+                                        The genre selector/filter above will allow you to filter the data on the dashboard by choosing one of the many genres in the list. The selector also allows you to see how many games belong to each genre (this figure will change as other filters are applied.)
+                                    </p>
+                                </div>
+                                <div class="dropdown-filter">
+                                    <h3 class="sub-headings">Publisher - </h3>
+                                    <div id="publisher-selector" class="selector"></div>
+                                    <p>
+                                        The publisher selector/filter above will allow you to filter the data on the dashboard by choosing one of the many publishers in the list. The selector also allows you to see how many games belong to each publisher (this figure will change as other filters are applied.)
+                                    </p>
+                                </div>
                             </div>
-                            <div class="content">
-                                <p>
-                                   The game selection/filter above will display all the games listed in the top 100 for each of the consoles by default this will change based on what filters have been applied and what games subsequently fit into the parameters set by the filters used.
-                                    (For games that occur on BOTH the PS4 AND the XBOX ONE, the number '2' will appear next to the name of the game. However, if the game only has the number '1' next to it's name, this is because the game only appears on top 100 for ONE of the consoles)
-                                </p>
+                        </article>
+                        <!-- Comparison of Game units sold per console (Pie chart) -->
+                        <article class="col-xs-12 col-sm-4">
+                            <div class="content-wrapper">
+                                <div class="content row">
+                                    <h2 class="headings">Comparison of game units sold per Console</h2>
+                                    <p>
+                                        The pie chart below was designed to compare the total games sold per console, and to do this it takes the total sales for each game, and it adds them together.
+                                        Once it has got the total sales for all the games on PS4 AND XBOX ONE, it then displays the information in an easy to understand format.
+                                    </p>
+                                </div>
+                                <div class="pie-chart row">
+                                    <div id="games-sold-comparison" class="col-xs-12"></div>
+                                </div>
+                                <div class="content row">
+                                    <p>
+                                        When looking at the number of units/game sold per console, it is clear there is definitely a winner in terms of raw sales.
+                                        The PS4 has a recorded total of 378,000,000 games sold in the entirety of its top 100.
+                                        This is vastly different to the XBOX ONE's recorded total game sales of 159,000,000.
+                                        This could therefore mean that if only one console was being targeted for a game to be developed on, the preferable option that could lead to higher sales would be the PS4.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                    <!-- Filter/Selector section -->
-                    <article class="col-xs-12 col-sm-4">
-                        <div class="content-wrapper">
-                            <div class="content">
-                                <h2 class="headings">Filter/Selectors</h2>
-                                <p>
-                                    In this section there are many filters/selectors provided to allow for the data to be filtered down to find the information that is required to help you the most.
-                                </p>
-                            </div>
-                            <div class="dropdown-filter">
-                                <h3 class="sub-headings">Console - </h3>
-                                <div id="console-selector" class="selector"></div>
-                                <p>
-                                    The console selector/filter above will allow you to filter the data on the dashboard by choosing all the data from the consoles, or choosing which console to specifically filter the dashboard's data down to. The selector also allows you to see how many games belong to each console (this figure will change as other filters are applied.)
-                                </p>
-                            </div>
-                            <div class="dropdown-filter">
-                                <h3 class="sub-headings">Genre - </h3>
-                                <div id="genre-selector" class="selector"></div>
-                                <p>
-                                    The genre selector/filter above will allow you to filter the data on the dashboard by choosing one of the many genres in the list. The selector also allows you to see how many games belong to each genre (this figure will change as other filters are applied.)
-                                </p>
-                            </div>
-                            <div class="dropdown-filter">
-                                <h3 class="sub-headings">Publisher - </h3>
-                                <div id="publisher-selector" class="selector"></div>
-                                <p>
-                                    The publisher selector/filter above will allow you to filter the data on the dashboard by choosing one of the many publishers in the list. The selector also allows you to see how many games belong to each publisher (this figure will change as other filters are applied.)
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- Comparison of Game units sold per console (Pie chart) -->
-                    <article class="col-xs-12 col-sm-4">
-                        <div class="content-wrapper">
-                            <div class="content row">
-                                <h2 class="headings">Comparison of game units sold per Console</h2>
-                                <p>
-                                    The pie chart below was designed to compare the total games sold per console, and to do this it takes the total sales for each game, and it adds them together.
-                                    Once it has got the total sales for all the games on PS4 AND XBOX ONE, it then displays the information in an easy to understand format.
-                                </p>
-                            </div>
-                            <div class="pie-chart row">
-                                <div id="games-sold-comparison" class="col-xs-12"></div>
-                            </div>
-                            <div class="content row">
-                                <p>
-                                    When looking at the number of units/game sold per console, it is clear there is definitely a winner in terms of raw sales.
-                                    The PS4 has a recorded total of 378,000,000 games sold in the entirety of its top 100.
-                                    This is vastly different to the XBOX ONE's recorded total game sales of 159,000,000.
-                                    This could therefore mean that if only one console was being targeted for a game to be developed on, the preferable option that could lead to higher sales would be the PS4.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        <section class="container-fluid">
-                <div class="row">
-                    <!-- Global sales per Genre (Bar chart) -->
-                    <article class="col-xs-12 col-sm-5">
-                        <div class="content-wrapper">
-                            <div class="content row">
-                                <h2 class="headings">Global sales per Genre</h2>
-                                <p>
-                                    One of the most important decisions for a game developer to make is: "What type of game do I want to make?"<br>
-                                    This is due to the video game market having certain genres that appeal to the masses over other genres.
-                                    Therefore its key to find out if a certain genre of game is preferred over that of another.
-                                </p>
-                            </div>
-                            <br>
-                            <div class="bar-chart row">
-                                <div id="genre-global-sales" class="col-xs-12"></div>
-                            </div>
-                            <div class="content row">
-                                <p>
-                                    The genre that leads in terms of global sales is the "Shooter" genre with 181,000,000 games sold. Whether this is surprising to most people or not, this is almost definitely due to the Call of Duty, Battlefield and Destiny franchises that have become so popular in recent years and have a loyal fanbase that often buy each and every release of their respective series.<br>
-                                    The "Action" genre follows in a close (but not quite) 2nd place with a global total of 115,000,000 games sold, and the "Sports" genre comes in 3rd with 87,000,000 games sales globally. Whilst neither of the figures for the sales of the 2nd/3rd place genres is low, it is clear to see there is a preferred genre for video games.
+                        </article>
+                    </div>
+                </section>
+            <section class="container-fluid">
+                    <div class="row">
+                        <!-- Global sales per Genre (Bar chart) -->
+                        <article class="col-xs-12 col-sm-5">
+                            <div class="content-wrapper">
+                                <div class="content row">
+                                    <h2 class="headings">Global sales per Genre</h2>
+                                    <p>
+                                        One of the most important decisions for a game developer to make is: "What type of game do I want to make?"<br>
+                                        This is due to the video game market having certain genres that appeal to the masses over other genres.
+                                        Therefore its key to find out if a certain genre of game is preferred over that of another.
+                                    </p>
+                                </div>
+                                <br>
+                                <div class="bar-chart row">
+                                    <div id="genre-global-sales" class="col-xs-12"></div>
+                                </div>
+                                <div class="content row">
+                                    <p>
+                                        The genre that leads in terms of global sales is the "Shooter" genre with 181,000,000 games sold. Whether this is surprising to most people or not, this is almost definitely due to the Call of Duty, Battlefield and Destiny franchises that have become so popular in recent years and have a loyal fanbase that often buy each and every release of their respective series.<br>
+                                        The "Action" genre follows in a close (but not quite) 2nd place with a global total of 115,000,000 games sold, and the "Sports" genre comes in 3rd with 87,000,000 games sales globally. Whilst neither of the figures for the sales of the 2nd/3rd place genres is low, it is clear to see there is a preferred genre for video games.
 
-                                </p>
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                    <!-- Global sales per Publisher (Stacked Bar chart) -->
-                    <article class="col-xs-12 col-sm-7">
-                        <div class="content-wrapper">
-                            <div class="content row">
-                                <h2 class="headings">Global sales per Publisher</h2>
-                                <p>
-                                    Almost as important as deciding what type of game you want to make, is deciding which publisher to try and get on board with the game you are trying to develop.<br>
-                                    This is due to many reasons, whether its down to certain publishers being larger and having more resources available to promote and market the game, or even just because certain publishers have experience and expertise when approaching certain genres of game.<br>
-                                    Therefore finding a decent publisher is almost as important as deciding upon the type of game you are looking to make.
-                                </p>
+                        </article>
+                        <!-- Global sales per Publisher (Stacked Bar chart) -->
+                        <article class="col-xs-12 col-sm-7">
+                            <div class="content-wrapper">
+                                <div class="content row">
+                                    <h2 class="headings">Global sales per Publisher</h2>
+                                    <p>
+                                        Almost as important as deciding what type of game you want to make, is deciding which publisher to try and get on board with the game you are trying to develop.<br>
+                                        This is due to many reasons, whether its down to certain publishers being larger and having more resources available to promote and market the game, or even just because certain publishers have experience and expertise when approaching certain genres of game.<br>
+                                        Therefore finding a decent publisher is almost as important as deciding upon the type of game you are looking to make.
+                                    </p>
+                                </div>
+                                <div class="stacked-bar-chart row">
+                                    <div id="publisher-global-sales" class="col-xs-12"></div>
+                                </div>
+                                <div class="content row">
+                                    <p>
+                                        When looking at each publisher and the total number of game sales they are linked to, it is easy to see that there is a clear leader when it comes to publishing video games that are extremely commercially successful, as Activision leads the global sales with 72,000,000 games sold worldwide through the 17 games they have shared between both console's top 100.<br>
+                                        Suprisingly Electonic Arts is in 2nd place with the global number of sales, which comes in at 43,000,000 across a total of 26 games shared between the two lists.<br><br>
+                                        Please note that the values displayed are for 3 different areas Globally, with these being: "North America", "Europe" and the "Rest of the World".<br>
+                                        The order of display is as follows:<br>
+                                        Bottom: North America<br>
+                                        Middle: Europe<br>
+                                        Top: Rest of the World
+                                    </p>
+                                </div>
                             </div>
-                            <div class="stacked-bar-chart row">
-                                <div id="publisher-global-sales" class="col-xs-12"></div>
+                        </article>
+                    </div>
+                </section>
+            <section class="container-fluid">
+                    <div class="row">
+                        <!-- North America sales per Genre (Bar chart) -->
+                        <article class="col-xs-12 col-sm-4">
+                            <div class="content-wrapper">
+                                <div class="content row">
+                                    <h2 class="headings">North America sales per Genre</h2>
+                                </div>
+                                <br>
+                                <div class="bar-chart row">
+                                    <div id="north-america-genre-sales" class="col-xs-12"></div>
+                                </div>
+                                <div class="content row">
+                                    <p>
+                                        When looking at the game sales in North America, the genre that leads in sales is the "Shooter" genre with 67,000,000 games sold.<br>
+                                        Yet again the "Action" genre follows in 2nd place with total sales of 34,000,000 games sold, and the "Sports" genre only marginally behind that in 3rd place with 28,000,000 games sold.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="content row">
-                                <p>
-                                    When looking at each publisher and the total number of game sales they are linked to, it is easy to see that there is a clear leader when it comes to publishing video games that are extremely commercially successful, as Activision leads the global sales with 72,000,000 games sold worldwide through the 17 games they have shared between both console's top 100.<br>
-                                    Suprisingly Electonic Arts is in 2nd place with the global number of sales, which comes in at 43,000,000 across a total of 26 games shared between the two lists.<br><br>
-                                    Please note that the values displayed are for 3 different areas Globally, with these being: "North America", "Europe" and the "Rest of the World".<br>
-                                    The order of display is as follows:<br>
-                                    Bottom: North America<br>
-                                    Middle: Europe<br>
-                                    Top: Rest of the World
-                                </p>
+                        </article>
+                        <!-- Europe sales per Genre (Bar chart) -->
+                        <article class="col-xs-12 col-sm-4">
+                            <div class="content-wrapper">
+                                <div class="content row">
+                                    <h2 class="headings">Europe sales per Genre</h2>
+                                </div>
+                                <br>
+                                <div class="bar-chart row europe-bar">
+                                    <div id="europe-genre-sales" class="col-xs-12"></div>
+                                </div>
+                                <div class="content row">
+                                    <p>
+                                        The Europe game sales are similar to that of North America, wherein the genre that leads in sales is the "Shooter" genre with 49,000,000 games sold.<br>
+                                        But this time the split between the "Action" genre (in 2nd place) and "Sports" (in 3rd place) is narrower, with the total game sales being 37,000,000, and 33,000,000 respectively.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        <section class="container-fluid">
-                <div class="row">
-                    <!-- North America sales per Genre (Bar chart) -->
-                    <article class="col-xs-12 col-sm-4">
-                        <div class="content-wrapper">
-                            <div class="content row">
-                                <h2 class="headings">North America sales per Genre</h2>
+                        </article>
+                        <!-- Rest of World sales per Genre (Bar chart) -->
+                        <article class="col-xs-12 col-sm-4">
+                            <div class="content-wrapper">
+                                <div class="content row">
+                                    <h2 class="headings">Rest of World sales per Genre</h2>
+                                </div>
+                                <br>
+                                <div class="bar-chart row">
+                                    <div id="rest-of-world-genre-sales" class="col-xs-12"></div>
+                                </div>
+                                <div class="content row">
+                                    <p>
+                                        When looking at the data for the sales across the Rest of the World, the genre that beats out in terms of sales is yet again the "Shooter" genre with 10,000,000.<br>
+                                        However, when looking at the sales recorded for 2nd and 3rd place, the data is quite surprising. The difference in terms of sales between 1st and 2nd ("Action") is now only 1,000,000 units, and the genre in 3rd place is tied between "Action/Adventure" and "Role-Playing".
+                                    </p>
+                                </div>
                             </div>
-                            <br>
-                            <div class="bar-chart row">
-                                <div id="north-america-genre-sales" class="col-xs-12"></div>
+                        </article>
+                    </div>
+                </section>
+            <section class="container-fluid">
+                    <div class="row">
+                        <!-- Comparison of Genres in top 100 (Pie chart) -->
+                        <article class="col-xs-12 col-sm-6">
+                            <div class="content-wrapper">
+                                <div class="content row">
+                                    <h2 class="headings">Comparison of Genres in the top 100</h2>
+                                    <p>
+                                        The pie chart below shows the split of genres in top 100 of both consoles by default.
+                                    </p>
+                                </div>
+                                <div class="pie-chart row">
+                                    <div id="genre-comparison" class="col-xs-12"></div>
+                                </div>
+                                <br>
+                                <div class="content row">
+                                    <p>
+                                        As we can see above, the default results of the pie chart are not surprising in the slightest.<br>
+                                        The genres that make up a larger portions of the top 100's are also the same genres that had the most game sales attributed to them.<br>
+                                        With the "Shooter" and "Action" genres having 52 and 46 games a piece (on the list), it shows that they appeal to a larger audience, and would in theory be a safer option when trying to develop a game and have it do well in our current day video game ecosystem.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="content row">
-                                <p>
-                                    When looking at the game sales in North America, the genre that leads in sales is the "Shooter" genre with 67,000,000 games sold.<br>
-                                    Yet again the "Action" genre follows in 2nd place with total sales of 34,000,000 games sold, and the "Sports" genre only marginally behind that in 3rd place with 28,000,000 games sold.
-                                </p>
+                        </article>
+                        <!-- Comparison of Publishers in top 100 (Pie chart) -->
+                        <article class="col-xs-12 col-sm-6">
+                            <div class="content-wrapper">
+                                <div class="content row">
+                                    <h2 class="headings">Comparison of Publishers in the top 100</h2>
+                                    <p>
+                                        The pie chart below shows the split of Publishers in top 100 of both consoles by default.
+                                    </p>
+                                </div>
+                                <div class="pie-chart row">
+                                    <div id="publisher-comparison" class="col-xs-12"></div>
+                                </div>
+                                <div class="content row">
+                                    <p>
+                                        As we can see above, the default results of the pie chart are closer when looking at the split of Publishers in the Top 100, than it is when looking at the split of Genres.<br>
+                                        The Publishers that have the most games in the top 100's are "Ubisoft" and "Electronic Arts" at 28 and 26 games respectively. The Nearest competitors to those are "Microsoft" and "Activision", trailing behind slightly with 18/17 games each.<br>
+                                        The one thing to note is that the "Others" segment of the pie chart is made up of multiple publishers responsible for 67 remaining games, and therefore is notably the largest section being represented.<br>
+                                        With the data that has been presented, it would therefore seem that the Publisher that would be the smartest to pursue when developing a game would be one of the leading heavy hitters, such as "Ubisoft" or "Electronic Arts".
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                    <!-- Europe sales per Genre (Bar chart) -->
-                    <article class="col-xs-12 col-sm-4">
-                        <div class="content-wrapper">
-                            <div class="content row">
-                                <h2 class="headings">Europe sales per Genre</h2>
-                            </div>
-                            <br>
-                            <div class="bar-chart row europe-bar">
-                                <div id="europe-genre-sales" class="col-xs-12"></div>
-                            </div>
-                            <div class="content row">
-                                <p>
-                                    The Europe game sales are similar to that of North America, wherein the genre that leads in sales is the "Shooter" genre with 49,000,000 games sold.<br>
-                                    But this time the split between the "Action" genre (in 2nd place) and "Sports" (in 3rd place) is narrower, with the total game sales being 37,000,000, and 33,000,000 respectively.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- Rest of World sales per Genre (Bar chart) -->
-                    <article class="col-xs-12 col-sm-4">
-                        <div class="content-wrapper">
-                            <div class="content row">
-                                <h2 class="headings">Rest of World sales per Genre</h2>
-                            </div>
-                            <br>
-                            <div class="bar-chart row">
-                                <div id="rest-of-world-genre-sales" class="col-xs-12"></div>
-                            </div>
-                            <div class="content row">
-                                <p>
-                                    When looking at the data for the sales across the Rest of the World, the genre that beats out in terms of sales is yet again the "Shooter" genre with 10,000,000.<br>
-                                    However, when looking at the sales recorded for 2nd and 3rd place, the data is quite surprising. The difference in terms of sales between 1st and 2nd ("Action") is now only 1,000,000 units, and the genre in 3rd place is tied between "Action/Adventure" and "Role-Playing".
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        <section class="container-fluid">
-                <div class="row">
-                    <!-- Comparison of Genres in top 100 (Pie chart) -->
-                    <article class="col-xs-12 col-sm-6">
-                        <div class="content-wrapper">
-                            <div class="content row">
-                                <h2 class="headings">Comparison of Genres in the top 100</h2>
-                                <p>
-                                    The pie chart below shows the split of genres in top 100 of both consoles by default.
-                                </p>
-                            </div>
-                            <div class="pie-chart row">
-                                <div id="genre-comparison" class="col-xs-12"></div>
-                            </div>
-                            <br>
-                            <div class="content row">
-                                <p>
-                                    As we can see above, the default results of the pie chart are not surprising in the slightest.<br>
-                                    The genres that make up a larger portions of the top 100's are also the same genres that had the most game sales attributed to them.<br>
-                                    With the "Shooter" and "Action" genres having 52 and 46 games a piece (on the list), it shows that they appeal to a larger audience, and would in theory be a safer option when trying to develop a game and have it do well in our current day video game ecosystem.
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                    <!-- Comparison of Publishers in top 100 (Pie chart) -->
-                    <article class="col-xs-12 col-sm-6">
-                        <div class="content-wrapper">
-                            <div class="content row">
-                                <h2 class="headings">Comparison of Publishers in the top 100</h2>
-                                <p>
-                                    The pie chart below shows the split of Publishers in top 100 of both consoles by default.
-                                </p>
-                            </div>
-                            <div class="pie-chart row">
-                                <div id="publisher-comparison" class="col-xs-12"></div>
-                            </div>
-                            <div class="content row">
-                                <p>
-                                    As we can see above, the default results of the pie chart are closer when looking at the split of Publishers in the Top 100, than it is when looking at the split of Genres.<br>
-                                    The Publishers that have the most games in the top 100's are "Ubisoft" and "Electronic Arts" at 28 and 26 games respectively. The Nearest competitors to those are "Microsoft" and "Activision", trailing behind slightly with 18/17 games each.<br>
-                                    The one thing to note is that the "Others" segment of the pie chart is made up of multiple publishers responsible for 67 remaining games, and therefore is notably the largest section being represented.<br>
-                                    With the data that has been presented, it would therefore seem that the Publisher that would be the smartest to pursue when developing a game would be one of the leading heavy hitters, such as "Ubisoft" or "Electronic Arts".
-                                </p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-    </section>
+                        </article>
+                    </div>
+                </section>
+        </section>
     <!--Footer -->
     <footer class="container-fluid footer">
-        <div class="row footer-content">
-            <div class="col-xs-12 col-sm-6">
-                <div class="footer-links">Original datasets from <span><a href="https://www.kaggle.com/sidtwr/videogames-sales-dataset#PS4_GamesSales.csv" target="_blank"><img src="assets/images/kaggle-logo.png" alt="kaggle.com" class="kaggle-logo"/></a></span>.</div>
+            <div class="row footer-content">
+                <div class="col-xs-12 col-sm-6">
+                    <div class="footer-links">Original datasets from <span><a href="https://www.kaggle.com/sidtwr/videogames-sales-dataset#PS4_GamesSales.csv" target="_blank"><img src="assets/images/kaggle-logo.png" alt="kaggle.com" class="kaggle-logo"/></a></span>.</div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <div><a href="https://github.com/Mcrowley93" class="footer-links" target="_blank">&copy;2019 Martin Crowley</a></div>
+                </div>
             </div>
-            <div class="col-xs-12 col-sm-6">
-                <div><a href="https://github.com/Mcrowley93" class="footer-links" target="_blank">&copy;2019 Martin Crowley</a></div>
-            </div>
-        </div>
-    </footer>
+        </footer>
 </body>
 </html>
