@@ -108,8 +108,10 @@ p {
     height: 100vh;
     width: 100%;
     position: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
-
 
 
 /*----- Footer -----*/
